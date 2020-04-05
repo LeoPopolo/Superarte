@@ -2,13 +2,17 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/estilos.css">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./scripts/index.js"></script>
- 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Superarte</title>
 </head>
 
@@ -30,19 +34,19 @@
                     <div id="divRedes">
     
                         <div class="divRed">
-                            <a title="Whatsapp" href="https://web.whatsapp.com/1121801491"><img src="./img/iconoWpp.png" alt="Whatsapp: 1121801491" class="red"/></a>
+                            <a class="ared" title="Whatsapp" href="https://web.whatsapp.com/1121801491"><img src="./img/iconoWpp.png" alt="Whatsapp: 1121801491" class="red"/></a>
                         </div>
                         <div class="divRed">
-                            <a title="Instagram" href="https://www.instagram.com/institutosuperarte/"><img src="./img/iconoIg.png" alt="Instagram: @institutosuperarte" class="red"/></a>
+                            <a class="ared" title="Instagram" href="https://www.instagram.com/institutosuperarte/"><img src="./img/iconoIg.png" alt="Instagram: @institutosuperarte" class="red"/></a>
                         </div>
                         <div class="divRed">
-                            <a title="Facebook" href="https://www.facebook.com/ISAformandoadoradores/"><img src="./img/iconoFb.png" alt="Facebook: Instituto Superarte" class="red"/></a>
+                            <a class="ared" title="Facebook" href="https://www.facebook.com/ISAformandoadoradores/"><img src="./img/iconoFb.png" alt="Facebook: Instituto Superarte" class="red"/></a>
                         </div>
                         <div class="divRed">
-                            <a title="Twitter" href="https://twitter.com/_superarte?lang=en"><img src="./img/iconoTw.png" alt="Twitter: @_SuperArte" class="red"/></a>
+                            <a class="ared" title="Twitter" href="https://twitter.com/_superarte?lang=en"><img src="./img/iconoTw.png" alt="Twitter: @_SuperArte" class="red"/></a>
                         </div>
                         <div class="divRed">
-                            <a title="Youtube" href="https://www.youtube.com/channel/UC463Wd8a_nO0B7sRTV-ondQ"><img src="./img/iconoYt.png" alt="Youtube: Instituto Superarte" class="red"/></a>
+                            <a class="ared" title="Youtube" href="https://www.youtube.com/channel/UC463Wd8a_nO0B7sRTV-ondQ"><img src="./img/iconoYt.png" alt="Youtube: Instituto Superarte" class="red"/></a>
                         </div>
                     </div>
                     
@@ -59,7 +63,7 @@
 
     <div class="contenido contenedor">
 
-        <main id="menuNoticias">
+        <main id="menuNoticias" class="seccionesMenu">
             <article>
                 <a name="noticias"></a>
                 <h2>Noticias</h2>
@@ -76,7 +80,7 @@
             </article>
         </main>
 
-        <main id="menuNosotros">
+        <main id="menuNosotros" class="seccionesMenu">
             <article>
                 <a name="mision"></a>
                 <h2>Mision</h2>
@@ -140,28 +144,37 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
             </article>
         </main>
 
-        <main id="menuStaff">
+        <main id="menuStaff" class="seccionesMenu">
             <article>
                 <a name="staff"></a>
                 <h2>Staff</h2>
                 <p>
                     <br>
-                    <i><b style="color: #00b8e4">Director:</b></i>   Alfredo Prieto
+                    <i><b style="color: #5accf1">Pastores:</b></i>   Pedro y Gertrudis Ibarra
                     <br><br>
-                    <i><b style="color: #00b8e4">Coordinadores:</b></i>   Maximiliano Martinez y Agustina Rondinoni
+                    <i><b style="color: #5accf1">Director:</b></i>   Alfredo Prieto
+                    <br><br>
+                    <i><b style="color: #5accf1">Coordinadores:</b></i>   Maximiliano Martínez y Agustina Rondinoni
                     <br><br>
 
-                    <i><b style="color: #00b8e4">Profesores:</b></i>   
+                    <i><b style="color: #5accf1">Responsable de profesores de música:</b></i>   Paula Bof <br><br>
+
+                    <i><b style="color: #5accf1">Profesora Referente de canto:</b></i>   Sara Aboal <br><br>
+
+                    <i><b style="color: #5accf1">Profesor Referente de guitarra/bajo/batería:</b></i>   Daniel Gutiérrez <br><br>
+
+                    <i><b style="color: #5accf1">Profesora Referente de piano:</b></i>   Paula Bof<br><br>
+                    
+
+                    <i><b style="color: #5accf1">Profesores:</b></i>   
 
                     <br><br><b>Canto</b> 
                     <br>Evangelina Carrevedo
-                    <br>Sara Aboal
                     <br>Karin Chui
                     <br>Belén Bobrovsky
 
                     <br><br><b>Teclado</b> 
                     <br>Ana Prieto
-                    <br>Paula Bof
                     <br>Hernán Marulla
                     <br>Matías Alfonzo
 
@@ -191,27 +204,29 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     <br>Alfredo Prieto
 
                     <br><br><b>Grabación digital</b>
-                    <br>Daniel Gutierrez
+                    <br>Daniel Gutiérrez
                     <br>Diego Fleitas
 
                     <br><br><b>Medios</b>
-                    <br>Jorge Orozco
+                    <br>Jorge Orozco y equipo Gospel Media.
 
                     <br><br>
-                    <i><b style="color: #00b8e4">Asistentes:</b></i> <br> 
+                    <i><b style="color: #5accf1">Diseño y Comunicaciones:</b></i> <br> <br>
 
-                    <br>Chantal Gálvez
-                    <br>Karen Silguero
-                    <br>Micaela Barroso
-                    <br>Jimena Valusek
-                    <br>Tobias Gálvez
-                    <br>Gabriel Amarilla
-                    <br>Damian López
-                    <br>Matías Ramírez
-                    <br>Teo Vargas
-                    <br>Pamela López
-                    <br>Ana Paula Ormachea
-                    <br>Micaela Bracamonte
+                     
+                    Micaela Bracamonte <br>
+                    Ana Paula Ormachea <br>
+                    Pamela López <br>
+                    Emilce Bracamonte
+
+                    <br><br>
+                    <i><b style="color: #5accf1">Responsables administrativas:</b></i> <br> <br>
+
+                    Jimena Valusek <br>
+                    Karen Silguero <br>
+                    Chantal Gálvez
+
+                    <br><br>
 
                 </p>
                 <hr style="border:15px;">
@@ -220,10 +235,10 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
             </article>
         </main>
 
-        <main id="menuModalidades">
+        <main id="menuModalidades" class="seccionesMenu">
 
         <div id="divLogosFormacion">
-
+            <a name="modalidad" ></a>
             <div id="ClickDevocional" class="IconosFormacion">
                 <img src="./img/fire.png" alt="" class="imagenFormacion">
                 <b>Tiempo devocional</b>
@@ -376,7 +391,7 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
             
         </main>
 
-        <main id="menuSedes">
+        <main id="menuSedes" class="seccionesMenu">
             <article>
                 <a name="sedes"></a>
                 <h2>Sedes</h2>

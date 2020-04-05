@@ -1,42 +1,30 @@
-html {
-    box-sizing: border-box;
-  }
+body {
+    
+  background-image: url("../img/fondoWeb.png");
+  background-size: cover;
+  font-family: 'Nanum Gothic', sans-serif;
+}
 
   #fotoSA{
 
-    margin-left: 37%;
-    margin-top: 5%;
+    margin-left: 8%;
+    margin-top: 3%;
     width: 320px;
     height: 150px;
   }
   
   #divLogo{
     
-    margin-left: 10%;
-    width: 80%;
-    background-color: rgba(31, 35, 36);
+    width: 93.5%;
+    height: 100%;
+    background-color: #444444;
 
-  }
-
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    font-family: Arial, Narrow;
-    color: black;
-    font-size: medium;
-  }
-  
-  body {
-    
-    background-image: url("../img/fondoWeb.png");
-    background-size: cover;
   }
   
   header {
-    /*padding: 20px 0;*/
     width: 100%;
-    background-color: rgba(31, 35, 36);
+    height: 230px;
+    background-color: #444444;
   }
   
   div.contenedor {
@@ -52,7 +40,7 @@ html {
   }
   
   .navegacion {
-    background-color: rgba(31, 35, 36);
+    background-color: #444444;
     width: 100%;
     height: 86px;
     border-bottom: 2px solid black;
@@ -61,7 +49,7 @@ html {
   nav {
     width: 97%;
     position: relative;
-    background-color: rgb(31, 35, 36);
+    background-color: #444444;
     margin-left: 3%;
   }
   
@@ -85,6 +73,7 @@ html {
     color: white;
     text-decoration: none;
     text-align: center;
+    font-weight: 700;
     padding: 30px;
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
@@ -92,7 +81,7 @@ html {
   }
   
   nav ul li a:hover {
-    background-color: #00b8e4;
+    background-color: #96def6;
     color: black;
     transition: background-color 1.0s ease-out; 
   }
@@ -100,7 +89,7 @@ html {
   nav ul ul {
     position: absolute;
     top: 100%;
-    background-color: #00b8e4;
+    background-color: #96def6;
     display: none;
   }
   
@@ -131,7 +120,7 @@ html {
     margin-top: 30px;
   }
   h2 {
-    color: #00b8e4;
+    color: #96def6;
     margin-bottom: 20px;
   }
   article img {
@@ -144,7 +133,7 @@ html {
     text-align: justify;
   }
   .boton {
-    background-color: #00b8e4;
+    background-color: #96def6;
     padding: 10px 30px;
     display: inline-block;
     margin-top: 10px;
@@ -155,8 +144,8 @@ html {
   }
 
   footer {
-    background-color: rgba(31, 35, 36);
-    height: 225px;
+    background-color: #444444;
+    height: 247px;
     padding-top: 40px;
     margin-top: 50px;
     border-top: 2px solid black;
@@ -196,7 +185,7 @@ html {
     height: 300px;
     position: fixed;
     border-radius: 30px;
-    background-color: #00b8e4;
+    background-color: #96def6;
     font-weight: bold;  
     margin-left: 22%;
     top: 200px;
@@ -216,8 +205,8 @@ html {
   }
 
   #divBotones{
-    margin-left: 21%;
-    width: 60%;
+    margin-left: 17%;
+    width: 65%;
     height: 20%;
   }
 
@@ -236,6 +225,7 @@ html {
 
     margin-top: 2%;
     float: right;
+
   }
 
   .nosotrosImg{
@@ -273,23 +263,37 @@ html {
   }
   
   .divRed{
-    width: 15%;
-    height: 100%;
+    width: 16%;
+    height: 44%;
     float: left;
     text-align: center;
-    margin-left: 2%;
+    margin-left: 3%;
+    margin-top: 7%;
   }
-
+  
   .red{
-    width: 97%;
-    height: 65%;
-    margin-top: 22%;
+    width: 75%;
+    height: 100%;
+    background-color: #444444;
+  }
+  
+  .divRed :hover{
+    border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 25px 25px 25px 25px;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    background-color: rgba(255, 255, 255);
+    transition: background-color 1.0s ease-out; 
   }
 
   #divRedes{
-    background-color: rgba(31, 35, 36);
-    width: 27.4%;
+    background-color: #444444;
+    width: 24%;
     height: 84px;
     float: left;
-    margin-left: 14%;
+    margin-left: 16%;
+  }
+
+  .seccionesMenu{
+    margin-top: 15%;
+    margin-bottom: 15%;
   }
