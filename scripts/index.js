@@ -32,7 +32,7 @@ function asignarEventos() {
         mostrarMinisterial();
     });
 
-    $("#btnInicio").click(function(){
+    $("#divLogo").click(function(){
         mostrarNovedades();
     });
 

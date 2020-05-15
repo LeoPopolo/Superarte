@@ -26,7 +26,6 @@
         <div class="navegacion">
             <nav>
                 <ul>
-                    <li class="divSecciones"><a href="#noticias" id="btnInicio">Inicio</a></li>
                     <li class="divSecciones"><a href="#mision" id="btnNosotros">Nosotros</a></li>
                     <li class="divSecciones"><a href="#modalidad" id="btnModalidades">Formación</a></li>
                     <li class="divSecciones"><a href="#staff" id="btnStaff">Staff</a></li>
@@ -62,70 +61,79 @@
         
     </div>
 
-    <div class="contenido contenedor">
-
-        <main id="menuNoticias" class="seccionesMenu">
-            <article>
-                <a name="noticias"></a>
-                <h2>Noticias</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
-                <p>
-                    Aca van las noticias subidas por los administradores de la pagina desde el servidor (inscripciones,
-                    eventos, avisos, etc).
-                </p>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
-                
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active col-md-4 col-md-offset-4" >
-                            <img src="img/1.jpeg" alt="">
+    <main id="menuNoticias">
+        
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                            <li data-target="#myCarousel" data-slide-to="5"></li>
+                            <li data-target="#myCarousel" data-slide-to="6"></li>
+                            <li data-target="#myCarousel" data-slide-to="7"></li>
+                            <li data-target="#myCarousel" data-slide-to="8"></li>
+                            <li data-target="#myCarousel" data-slide-to="9"></li>
+                        </ol>
+                    
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active col-md-4 col-md-offset-4" >
+                                <img src="img/1.jpeg" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/2.jpeg" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/3.jpeg" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/4.jpg" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/5.JPG" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/6.JPG" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/7.JPG" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/8.jpg" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/9.jpg" alt="">
+                            </div>
+                            <div class="item col-md-4 col-md-offset-4">
+                                <img src="img/10.jpeg" alt="">
+                            </div>
                         </div>
-                        <div class="item col-md-4 col-md-offset-4">
-                            <img src="img/2.jpeg" alt="">
-                        </div>
-                        <div class="item col-md-4 col-md-offset-4">
-                            <img src="img/3.jpeg" alt="">
-                        </div>
-                        <div class="item col-md-4 col-md-offset-4">
-                            <img src="img/4.jpeg" alt="">
-                        </div>
+                    
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
-            </article>
-        </main>
+    </main>
+    <div class="contenido container">
 
-        <main id="menuNosotros" class="seccionesMenu">
+
+        <main id="menuNosotros" class="seccionesMenu container">
             <article>
                 <a name="mision"></a>
                 <h2>Mision</h2>
                 <p>
                     Formar adoradores.
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
             <article>
                 <a name="vision"></a>
@@ -137,9 +145,7 @@
                     <br>
                     &bull; Levantar el nombre de Jesús a través de las artes
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
             <article>
                 <a name="historia"></a>
@@ -151,36 +157,32 @@ En la Iglesia del Puente, puntualmente en el Ministerio de Adolescentes (liderad
 Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la soberanía y fidelidad de Dios desde su origen, nace en 2015 el Instituto SuperArte cuyo propósito central es formar adoradores de Dios a través de las diferentes expresiones artísticas.
                 </p>
 
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
             <article>
                 <a name="pilares"></a>
                 <h2>Pilares</h2>
                 <p>
                     <b>Tres Pilares</b>
-                    <br>
+                    <br><hr>
                     &bull; Tiempo devocional:
                     <br>
                     Tiempo de ministración y relación íntima con Dios a través de la adoración y la oración incluyendo reflexiones en Su Palabra.
-                    <br>
+                    <br><hr>
                     &bull; Formación ministerial: 
                     <br>
                     Con base en la Biblia, se formará a los alumnos en los fundamentos clave para desarrollar una vida y ministerio de adoración.
-                    <br>
+                    <br><hr>
                     &bull; Formación técnica:
                     <br>
                     De acuerdo a la modalidad elegida, desde el Instituto creemos en la búsqueda de la superación y la excelencia y a ello debemos nuestro nombre. Es en esa dirección que entrenamos a nuestros alumnos para se desarrollen de la mejor forma.
                      
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
         </main>
 
-        <main id="menuStaff" class="seccionesMenu">
+        <main id="menuStaff" class="seccionesMenu container">
             <article>
                 <a name="staff"></a>
                 <h2>Staff</h2>
@@ -253,7 +255,7 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     Micaela Bracamonte <br>
                     Ana Paula Ormachea <br>
                     Pamela López <br>
-                    Emilce Bracamonte
+                    Emilse Bracamonte
 
                     <br><br>
                     <i><b style="color: #5accf1">Responsables administrativas:</b></i> <br> <br>
@@ -265,13 +267,11 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     <br><br>
 
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
         </main>
 
-        <main id="menuModalidades" class="seccionesMenu">
+        <main id="menuModalidades" class="seccionesMenu container">
 
         <div id="divLogosFormacion">
             <a name="modalidad" ></a>
@@ -296,9 +296,7 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
             <article>
                 <a name="modalidad"></a>
                 <h2>Música</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
                 <p>
                     <b>1.</b> Los instrumentos que se enseñan en el instituto son: Bajo, Bateria, Guitarra, Piano, Saxo, Violin, Trompeta y Canto.
                     <br>
@@ -309,15 +307,11 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     <b>4.</b> A partir de 3° año todos los instrumentos ven la materia de teoría musical en ensamble
                     <br>
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
             <article>
                 <h2>Artes plásticas</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
                 <p>
                     <b>Temáticas principales</b>
                     <br><br>
@@ -331,30 +325,22 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     Cada cuatrimestre corresponde a una temática.
                     En el último cuatrimestre de cursada se realiza un proyecto integrador.
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
             <article>
                 <h2>Medios</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
                 <p>
                     <b>1.</b> Hay un programa de 2 años diseñado especialmente para el instituto
                     <br>
                     <b>2.</b> En el programa se ven materias de diversos temas relacionados con <i>Producción, Post-producción, Diseño, Social media, Radio y Fotografía.</i>
                     <br>
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
             <article>
                 <h2>Danza</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
                 <p>
                     <b>Dos estilos</b>
                     <br><br>
@@ -363,30 +349,22 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     <br><br>
                     Cada cuatrimestre corresponde a una temática.
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
             <article>
                 <h2>Grabación digital</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
                 <p>
                     Esta modalidad comprende una formación base de 2 años en la cual  los alumnos trabajarán a través de la plataforma CUBASE para grabar, mezclar, editar y producir audio analógico-digital. El perfil del curso es altamente práctico, se grabarán instrumentos en vivo y se realizará la mezcla y edición a través del software mencionado. El perfil del curso es HOME STUDIO, es decir, focalizado a grabar en nuestras casas con herramientas más que accesibles.
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
         </div>
          
         <div id="divMinisterial">
             <article>
                 <h2>Formación ministerial</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
                 <p>
                     La <i>Formación ministerial</i> se divide en 4 bloques. <br>
                     El bloque contiene 2 materias y dura 1 cuatrimestre. <br>
@@ -404,30 +382,24 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     <br>Tabernáculo
                     <br>Culto a Dios <br><br>
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
         </div>
 
         <div id="divDevocional">
             <article>
                 <h2>Devocional</h2>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
                 <p>
                     Tiempo de intimidad en adoración, oración y reflexión bíblica. Creemos firmemente que este tiempo es el corazón de formación de los alumnos. Conocer de forma personal a Dios hará explotar tus capacidades y conocimientos técnicos y bíblico-teológicos.
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
         </div>
             
         </main>
 
-        <main id="menuSedes" class="seccionesMenu">
+        <main id="menuSedes" class="seccionesMenu container">
             <article>
                 <a name="sedes"></a>
                 <h2>Sedes</h2>
@@ -446,15 +418,13 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
                     <i>E-Mail: </i>superartepringles@gmail.com                    
                     <br><br>
                 </p>
-                <hr style="border:15px;">
-                <hr style="border:2px;">
-                <hr style="width: 100%;">
+                <hr>
             </article>
         </main>
     </div>
 
     <footer>
-        <div class="contenedor">
+        <div class="container">
             <div class="menu">
                 <nav>
                     <ul>
