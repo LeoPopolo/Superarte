@@ -2,7 +2,21 @@
 window.onload = asignarEventos;
 
 function asignarEventos() {
+    
+    window.sr = ScrollReveal();
+        
+    sr.reveal('header',{
+        duration: 2000,
+        origin: 'left',
+        distance: '300px'
+    });
+    sr.reveal('#menuNoticias',{
+        duration: 2000,
+        origin: 'bottom',
+        distance: '300px'
+    });
 
+    
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
     $("#menuStaff").hide();
@@ -11,19 +25,19 @@ function asignarEventos() {
     $("#btnIngresar").click(function(){
         inyectarForm();
     });
-
+    
     $("#btnNosotros").click(function(){
         mostrarNosotros();
     });
-
+    
     $("#btnModalidades").click(function(){
         mostrarModalidades();
     });
-
+    
     $("#ClickDevocional").click(function(){
         mostrarDevocional();
     });
-
+    
     $("#ClickTecnica").click(function(){
         mostrarTecnica();
     });
@@ -31,30 +45,37 @@ function asignarEventos() {
     $("#ClickMinisterial").click(function(){
         mostrarMinisterial();
     });
-
+    
     $("#divLogo").click(function(){
         mostrarNovedades();
     });
-
+    
     $("#btnStaff").click(function(){
         mostrarStaff();
     });
-
+    
     $("#btnSedes").click(function(){
         mostrarSedes();
     });
-
-
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 }
 
 function mostrarNovedades(){
-
+    
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
     $("#menuNoticias").fadeIn("slow");
     $("#menuStaff").hide();
     $("#menuSedes").hide();
-
+    
 }
 
 function mostrarModalidades(){

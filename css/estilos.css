@@ -21,7 +21,7 @@ body {
   #divLogo{
     
     height: 100%;
-    background-color: #444444;
+    background-color: black;
 
   }
   
@@ -32,28 +32,20 @@ body {
   header {
     width: 100%;
     height: 230px;
-    background-color: #444444;
+    background-color: black;
   }
   
 
-  div.navegacion nav ul li a{
+  nav ul li a{
 
     text-decoration: none;
 
   }
   
-  .navegacion {
-    background-color: #444444;
-    width: 100%;
-    height: 86px;
-    border-bottom: 2px solid black;
-  }
-  
   nav {
-    width: 97%;
+    width: 100%;
     position: relative;
-    background-color: #444444;
-    margin-left: 3%;
+    background-color: black;
   }
   
   nav ul {
@@ -74,7 +66,7 @@ body {
     display: inline-block;
     width: 150px;
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
     text-align: center;
     font-weight: 700;
     padding: 30px;
@@ -124,6 +116,12 @@ body {
     float: left;
   }
 
+  #menus{
+    float: left;
+    margin-left: 7%;
+    width: 100%;
+  }
+
   article {
     margin-top: 30px;
   }
@@ -148,10 +146,12 @@ body {
   }
 
   footer {
-    background-color: #444444;
+    background-color: black;
+    width: 100%;
     height: 247px;
     padding-top: 40px;
     border-top: 2px solid black;
+    float: left;
   }
   footer h2 {
     color: #ffffff;
@@ -237,12 +237,11 @@ body {
 
   .IconosFormacion{
 
-    width: 25%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     float: left;
     text-align: center;
     border: 2px solid black;
-    margin-left: 6%;
 
   }
 
@@ -252,8 +251,20 @@ body {
   }
 
   #divLogosFormacion{
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    float: left;
+    margin-bottom: 1.5%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
 
-    height: 300px;
+  #menuModalidades div article{
+    float: left;
+    margin-top: 10%;
+    width: 100%;
   }
 
   #volverArriba{
@@ -287,6 +298,67 @@ body {
     text-align: center;
   }
 
-  #menuNoticias{
-    margin-top: 2px;
-  }
+ @media (max-width: 600px)
+ {
+
+    #fotoSA{
+      width: 90%;
+      height: 50%;
+      margin-left: 5%;
+      margin-top: 18%;
+    }
+
+    #divLogo{
+      height: 350px;
+    }
+
+    ul{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    nav > ul > li {
+      width: 100%;
+      margin: 0;
+    }
+
+    #divRedes{
+      margin: 0;
+      width: 100%;
+    }
+
+    .divRed{
+      padding: 0;
+      width: 12%;
+      height: 55%;
+      margin-left: 7%;
+      margin-top: 3%;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    #divLogosFormacion{
+      width: 100%;
+      height: 1300px;
+      padding: 10px;
+      float: left;
+      margin-bottom: 1.5%;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    #menuModalidades div article{
+      float: left;
+      margin-top: 10%;
+    }
+
+    #menus{
+      margin: 0;
+    }
+
+ }

@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./scripts/index.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/estilos.css">
+    
     <title>Superarte</title>
 </head>
 
@@ -23,13 +26,12 @@
             <button type="button" class="btn btn-outline-light" id="btnIngresar">Iniciar sesion</button>
             <img src="img/superarteLogo.png" alt="Logo Superarte" id="fotoSA">
         </div>
-        <div class="navegacion">
             <nav>
                 <ul>
-                    <li class="divSecciones"><a href="#mision" id="btnNosotros">Nosotros</a></li>
-                    <li class="divSecciones"><a href="#modalidad" id="btnModalidades">Formación</a></li>
-                    <li class="divSecciones"><a href="#staff" id="btnStaff">Staff</a></li>
-                    <li class="divSecciones"><a href="#sedes" id="btnSedes">Sedes</a></li>
+                    <li class="divSecciones"><a href="#menuNosotros" id="btnNosotros">Nosotros</a></li>
+                    <li class="divSecciones"><a href="#menuModalidades" id="btnModalidades">Formación</a></li>
+                    <li class="divSecciones"><a href="#menuStaff" id="btnStaff">Staff</a></li>
+                    <li class="divSecciones"><a href="#menuSedes" id="btnSedes">Sedes</a></li>
     
                     <div id="divRedes">
     
@@ -52,14 +54,12 @@
                     
                 </ul>
             </nav> 
-                                               
-        </div>
     </header>
     
 
-    <div id="frmIngreso" class="container">
+    <!--<div id="frmIngreso" class="container">
         
-    </div>
+    </div>-->
 
     <main id="menuNoticias">
         
@@ -123,7 +123,7 @@
                         </a>
                     </div>
     </main>
-    <div class="contenido container">
+    <div class="contenido container" id="menus">
 
 
         <main id="menuNosotros" class="seccionesMenu container">
@@ -151,10 +151,8 @@
                 <a name="historia"></a>
                 <h2>Historia</h2>
                 <p>
-                    El Instituto SuperArte nació del anhelo del corazón de Dios a través de los Pastores Pedro y Gertrudis Ibarra. Como Pastores principales de la Iglesia del Puente en Quilmes, siempre se han caracterizado por tener en su iglesia el ADN de adoradores de Dios por sobre todas las cosas. Es por ello, que SuperArte vio su origen a partir de esa raíz de adoración declarando el lema "Formando Adoradores".
-Para hacer práctico este sueño, era necesaria una persona líder del proyecto. Es allí, que Dios  acercó a la Iglesia al Pastor Alfredo Prieto, quien con su formación teológica y musical, sumada a una vida cristiana práctica y llena de la revelación de Dios, se convirtió en la persona idónea para hacerlo.
-En la Iglesia del Puente, puntualmente en el Ministerio de Adolescentes (liderado por Carlos Vargas y Gabriela Lampi), ya estaba funcionando una escuela de música enfocada a alumnos de 13 a 18 años. En su fidelidad, Dios tomó y fusionó al nuevo proyecto esta pequeña obra liderada por Maximiliano Martínez y Agustina Rondinoni, quienes se unieron a acompañar al Pastor Alfredo en el nuevo desafío.
-Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la soberanía y fidelidad de Dios desde su origen, nace en 2015 el Instituto SuperArte cuyo propósito central es formar adoradores de Dios a través de las diferentes expresiones artísticas.
+                    El Instituto SuperArte nació del anhelo del corazón de Dios a través de los pastores Pedro y Gertrudis Ibarra. Como pastores principales de la Iglesia del Puente en Quilmes desde 1974, se han caracterizado por ser verdaderos adoradores de Dios en todas las areas de sus vidas. SuperArte, vio su origen a partir de esa raíz de adoración declarando el lema "FORMANDO ADORADORES".
+Para concretar este sueño, Dios acercó al pastor Alfredo Prieto y a todo un equipo idóneo para hacerlo cuya base de trabajo es la unidad y el enfoque espiritual. En un mundo en el que el arte es muchas veces mal utilizada, el fin central del Instituto es formar adoradores de Dios a través de las diferentes expresiones artísticas que impacten en todos los ámbitos.
                 </p>
 
                 <hr>
@@ -273,8 +271,8 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
 
         <main id="menuModalidades" class="seccionesMenu container">
 
+        <a name="modalidad" ></a>
         <div id="divLogosFormacion">
-            <a name="modalidad" ></a>
             <div id="ClickDevocional" class="IconosFormacion">
                 <img src="./img/fire.png" alt="" class="imagenFormacion">
                 <b>Tiempo devocional</b>
@@ -428,7 +426,7 @@ Mediante la unión de todas estas cosas, donde se puede apreciar con claridad la
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="#" id="volverArriba">Volver Arriba</a></li>
+                        <li><a href="#btnIngresar" id="volverArriba">Volver Arriba</a></li>
                     </ul>
                 </nav>
             </div>
