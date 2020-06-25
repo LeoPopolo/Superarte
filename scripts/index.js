@@ -1,5 +1,6 @@
 
 window.onload = asignarEventos;
+let direccionFlecha = 1;
 
 function asignarEventos() {
     
@@ -46,7 +47,7 @@ function asignarEventos() {
         mostrarMinisterial();
     });
     
-    $("#divLogo").click(function(){
+    $("#fotoSA").click(function(){
         mostrarNovedades();
     });
     
@@ -56,6 +57,23 @@ function asignarEventos() {
     
     $("#btnSedes").click(function(){
         mostrarSedes();
+    });
+
+    $("#mostrarIconos").click(function(){
+        $("#ulNav").slideToggle();
+        if(direccionFlecha == 1){
+            $("#imgFlecha").css("-webkit-transform","rotate(-180deg)");
+            $("#imgFlecha").css("-moz-transform","rotate(-180deg)");
+            $("#imgFlecha").css("-ms-transform","rotate(-180deg)");
+            $("#imgFlecha").css("-transform","rotate(-180deg)");
+            direccionFlecha = 0;
+        }else{
+            $("#imgFlecha").css("-webkit-transform","rotate(0deg)");
+            $("#imgFlecha").css("-moz-transform","rotate(0deg)");
+            $("#imgFlecha").css("-ms-transform","rotate(0deg)");
+            $("#imgFlecha").css("-transform","rotate(0deg)");
+            direccionFlecha = 1;
+        }
     });
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
