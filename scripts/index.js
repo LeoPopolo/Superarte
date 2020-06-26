@@ -5,18 +5,6 @@ let direccionFlecha = 1;
 function asignarEventos() {
     
     window.sr = ScrollReveal();
-        
-    sr.reveal('header',{
-        duration: 2000,
-        origin: 'left',
-        distance: '300px'
-    });
-    sr.reveal('#menuNoticias',{
-        duration: 2000,
-        origin: 'bottom',
-        distance: '300px'
-    });
-
     
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
@@ -59,6 +47,19 @@ function asignarEventos() {
         mostrarSedes();
     });
 
+    $("#loadPage").delay(1000).fadeOut("slow");    
+    
+    sr.reveal('header',{
+        duration: 2000,
+        origin: 'left',
+        distance: '300px'
+    });
+    sr.reveal('#menuNoticias',{
+        duration: 2000,
+        origin: 'bottom',
+        distance: '300px'
+    });
+
     $("#mostrarIconos").click(function(){
         $("#ulNav").slideToggle();
         if(direccionFlecha == 1){
@@ -89,7 +90,7 @@ function asignarEventos() {
 function mostrarNovedades(){
     
     window.location.replace(
-        "https://leopopolo.github.io/Superarte/"
+        "../index.html"
     );
 }
 
