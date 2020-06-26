@@ -289,22 +289,23 @@ body {
     text-align: center;
   }
 
- @media (max-width: 600px)
- {
+@media (max-width: 600px)
+{
 
     header{
       height: auto;
     }
 
     #fotoSA{
-      width: 90%;
-      height: 50%;
-      margin-left: 5%;
+      width: 95%;
+      height: auto;
+      margin-left: 2.5%;
       margin-top: 18%;
     }
 
     #divLogo{
-      height: 350px;
+      height: auto;
+      padding-bottom: 5%;
     }
 
     ul{
@@ -376,4 +377,4 @@ body {
     #imgFlecha{
       transition: transform 0.5s;
     }
-  }
+}

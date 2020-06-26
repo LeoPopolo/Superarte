@@ -88,15 +88,20 @@ function asignarEventos() {
 
 function mostrarNovedades(){
     
-    $("#menuNosotros").hide();
-    $("#menuModalidades").hide();
-    $("#menuNoticias").fadeIn("slow");
-    $("#menuStaff").hide();
-    $("#menuSedes").hide();
-    
+    window.location.replace(
+        "../index.html"
+    );
 }
 
 function mostrarModalidades(){
+
+    var cuadro1 = document.getElementById("ClickDevocional");
+    var cuadro2 = document.getElementById("ClickTecnica");
+    var cuadro3 = document.getElementById("ClickMinisterial");
+
+    cuadro1.style.borderColor = "black";
+    cuadro2.style.borderColor = "black";
+    cuadro3.style.borderColor = "black";
 
     $("#menuNosotros").hide();
     $("#menuNoticias").hide();
