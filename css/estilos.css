@@ -15,24 +15,26 @@ body {
   z-index: 1000;
 }
 
-#loadPage img {
-  display: block;
+#divCarga {
   width: 400px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  position: relative;
   margin: auto;
+  margin-top: 12%;
+}
+
+#spinnerCarga{
+  float: left;
+  width: 30%;
+  position: relative;
+  margin-left: 35%;
 }
 
   #fotoSA{
 
     margin-left: 8%;
     margin-top: 3%;
-    width: 260px;
-    height: 120px;
+    width: 300px;
+    height: auto;
   }
 
   h2{
@@ -41,10 +43,7 @@ body {
 
 
   #divLogo{
-    
-    height: 100%;
-    background-color: black;
-
+    height: 90%;
   }
   
   #divLogo :hover{
@@ -302,8 +301,8 @@ body {
   #divRedes{
     width: 24%;
     height: 84px;
-    float: left;
-    margin-left: 16%;
+    float: right;
+    margin-right: 5%;
   }
 
   .seccionesMenu{
@@ -399,5 +398,12 @@ body {
 
     #imgFlecha{
       transition: transform 0.5s;
+    }
+
+    #divCarga {
+      width: 90%;
+      position: relative;
+      margin-left: 5%;
+      margin-top: 70%;
     }
 }
