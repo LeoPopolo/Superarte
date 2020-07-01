@@ -4,6 +4,14 @@ body {
   font-family: 'nunito', cursive;
 }
 
+@media (min-width: 768px){
+  .col-md-4 {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  } 
+}
+
 #loadPage {
   display: block;
   width: 100%;
@@ -324,6 +332,12 @@ body {
       margin-left: 2.5%;
       margin-top: 18%;
     }
+
+    .col-md-4 {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    } 
 
     #divLogo{
       height: auto;
