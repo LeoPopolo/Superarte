@@ -1,4 +1,12 @@
+html{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   background-image: url("../img/fondoWeb.png");
   background-size: cover;
   font-family: 'nunito', cursive;
@@ -34,6 +42,10 @@ body {
   margin-top: 12%;
 }
 
+#ulNav{
+  margin-left: 5%;
+}
+
 #spinnerCarga{
   float: left;
   width: 30%;
@@ -55,7 +67,8 @@ body {
 
 
   #divLogo{
-    height: 90%;
+    height: 100%;
+    padding-bottom: 4%;
   }
   
   #divLogo :hover{
@@ -64,13 +77,14 @@ body {
 
   header {
     width: 100%;
-    height: 230px;
+    height: 100%;
     background-color: black;
   }
   
   nav {
     width: 100%;
     position: relative;
+    float: left;
     background-color: black;
     -webkit-box-shadow: 0px 15px 28px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 15px 28px 5px rgba(0,0,0,0.75);
@@ -79,10 +93,13 @@ body {
   
   nav ul {
     list-style: none;
+    padding: 0;
+    margin-bottom: 0.1%;
   }
   
   nav > ul > li {
     float: left;
+    height: 100%;
   }
   
   nav ul:after {
@@ -93,7 +110,7 @@ body {
   
   nav ul li a {
     display: inline-block;
-    width: 150px;
+    width: 100%;
     color: white;
     text-decoration: none !important;
     text-align: center;
@@ -169,7 +186,7 @@ body {
   footer {
     background-color: black;
     width: 100%;
-    height: 247px;
+    height: auto;
     padding-top: 40px;
     border-top: 2px solid black;
     float: left;
@@ -183,22 +200,20 @@ body {
 
   footer div.menu {
     float: left;
-    width: 40%;
+    width: 100%;
     text-align: right;
   }
 
   footer nav {
-    width: 47%;
-  }
-
-  footer nav ul li a {
-    width: auto;
+    width: 100%;
   }
 
   p.copyright {
+    width: 100%;
     padding: 20px 0;
     text-align: center;
     color: #ffffff;
+    float: left;
   }
 
   #frmIngreso form{
@@ -275,6 +290,10 @@ body {
     height: auto;
   }
 
+  #liVolverArriba{
+    margin-left: 5%;
+  }
+
   #divLogosFormacion{
     width: 100%;
     height: 400px;
@@ -302,7 +321,6 @@ body {
     float: left;
     text-align: center;
     margin-left: 3%;
-    margin-top: 7%;
   }
   
   .red{
@@ -311,10 +329,10 @@ body {
   }
   
   #divRedes{
-    width: 24%;
-    height: 84px;
+    width: 25%;
     float: right;
     margin-right: 5%;
+    margin-top: 1.60%;
   }
 
   .seccionesMenu{
@@ -327,13 +345,14 @@ body {
 {
 
     header{
+      width: 100%;
       height: auto;
     }
 
     #fotoSA{
-      width: 95%;
+      width: 100%;
       height: auto;
-      margin-left: 2.5%;
+      margin: 0;
       margin-top: 18%;
     }
 
@@ -343,9 +362,17 @@ body {
       padding: 0;
     } 
 
+    nav{
+      padding: 0;
+      margin: 0;
+    }
+
     #divLogo{
+      width: 100%;
       height: auto;
-      padding-bottom: 5%;
+      padding-bottom: 15%;
+      padding-right: 2%;
+      padding-left: 2%;
     }
 
     ul{
@@ -362,19 +389,21 @@ body {
     #divRedes{
       margin: 0;
       width: 100%;
+      padding-bottom: 5%;
     }
 
     .divRed{
       padding: 0;
       width: 12%;
       height: auto;
-      margin-left: 7%;
+      margin-left: 6.6%;
       margin-top: 3%;
     }
 
     nav ul li a {
       display: inline-block;
       width: 100%;
+      margin-left: 0;
     }
 
     #divLogosFormacion{
@@ -383,6 +412,7 @@ body {
       padding: 10px;
       float: left;
       margin-bottom: 1.5%;
+      margin-top: 5%;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
@@ -403,15 +433,20 @@ body {
 
     #menus{
       margin: 0;
+      margin-top: 5%;
     }
 
     #mostrarIconos{
+      float: left;
+      margin: 0;
       text-align: center;
       padding: 25px;
     }
 
     #ulNav{
+      float: left;
       display: none;
+      margin: 0;
     }
 
     #imgFlecha{
@@ -426,5 +461,9 @@ body {
       left: 0;
       right: 0;
       margin: auto;
+    }
+
+    #liVolverArriba{
+      margin-left: 0;
     }
 }
