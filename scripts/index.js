@@ -54,11 +54,6 @@ function asignarEventos() {
         origin: 'left',
         distance: '300px'
     });
-    sr.reveal('footer',{
-        duration: 2000,
-        origin: 'left',
-        distance: '300px'
-    });
     sr.reveal('#menuNoticias',{
         duration: 2000,
         origin: 'bottom',

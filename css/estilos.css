@@ -1,5 +1,5 @@
 html{
-  background-color: black;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -29,7 +29,8 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: black;
+  background-image: url("../img/imgbanner.jpg");
+  background-size: cover;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -51,6 +52,7 @@ body {
   width: 30%;
   position: relative;
   margin-left: 35%;
+  margin-top: 3%;
 }
 
   #fotoSA{
@@ -78,17 +80,21 @@ body {
   header {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-image: url("../img/imgbanner.jpg");
+    background-size: cover;
+  }
+
+  a:hover{
+    color: white;
   }
   
   nav {
     width: 100%;
     position: relative;
     float: left;
-    background-color: black;
-    -webkit-box-shadow: 0px 15px 28px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 15px 28px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 15px 28px 5px rgba(0,0,0,0.75);
+    background-image: url("../img/imgbanner.jpg");
+    background-size: cover;
+    box-shadow: 1px 30px 30px 5px rgba(0,0,0,0.75)
   }
   
   nav ul {
@@ -98,8 +104,10 @@ body {
   }
   
   nav > ul > li {
+    width: 15%;
     float: left;
     height: 100%;
+    position: relative;
   }
   
   nav ul:after {
@@ -116,14 +124,40 @@ body {
     text-align: center;
     font-weight: 700;
     padding: 30px;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
   }
   
-  nav ul li a:hover {
-    background-color: rgb(0, 189, 202);
-    color: black;
+  nav ul li a::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #96def6;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transition: all .3s;
+  }
+
+  nav ul li a:hover::before{
+    width: 100%;
+    left: 0;
+  }
+
+  nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #96def6;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transition: all .3s;
+  }
+
+  nav ul li a:hover::after{
+    width: 100%;
+    left: 0;
   }
   
   nav ul ul {
@@ -184,21 +218,22 @@ body {
   }
 
   footer {
-    background-color: black;
+    background-image: url("../img/imgbanner.jpg");
+    background-size: cover;
     width: 100%;
     height: auto;
     padding-top: 40px;
+    padding-bottom: 10px;
     border-top: 2px solid black;
     float: left;
-    -webkit-box-shadow: 0px -12px 22px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -12px 22px 5px rgba(0,0,0,0.75);
     box-shadow: 0px -12px 22px 5px rgba(0,0,0,0.75);
   }
   footer h2 {
     color: #ffffff;
   }
 
-  footer div.menu {
+  footer div.menu nav{
+    box-shadow: 0px 0px 0px 0px transparent;
     float: left;
     width: 100%;
     text-align: right;
@@ -275,23 +310,28 @@ body {
   }
 
   .IconosFormacion{
-
     width: 100%;
     height: 100%;
     float: left;
-    text-align: center;
+    border-radius: 30%;
     border: 2px solid black;
     cursor: pointer;
+  }
 
+  .IconosFormacion div{
+    margin-top: 5%;
   }
 
   .imagenFormacion{
-    width: 95%;
+    flex: 2;
+    width: 50%;
     height: auto;
+    margin-top: 20%;
   }
 
   #liVolverArriba{
     margin-left: 5%;
+    text-decoration: none;
   }
 
   #divLogosFormacion{
@@ -300,6 +340,7 @@ body {
     padding: 10px;
     float: left;
     margin-bottom: 1.5%;
+    margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
@@ -311,10 +352,6 @@ body {
     width: 100%;
   }
 
-  #volverArriba{
-    text-decoration: none;
-  }
-  
   .divRed{
     width: 16%;
     height: auto;
@@ -389,7 +426,8 @@ body {
     #divRedes{
       margin: 0;
       width: 100%;
-      padding-bottom: 5%;
+      padding-bottom: 7%;
+      padding-top: 5%;
     }
 
     .divRed{
@@ -409,7 +447,7 @@ body {
     #divLogosFormacion{
       width: 100%;
       height: auto;
-      padding: 10px;
+      padding: 0;
       float: left;
       margin-bottom: 1.5%;
       margin-top: 5%;
@@ -428,12 +466,12 @@ body {
     }
 
     .IconosFormacion{
+      border-radius: 30%;
       height: auto;
     }
 
     #menus{
       margin: 0;
-      margin-top: 5%;
     }
 
     #mostrarIconos{
@@ -456,8 +494,8 @@ body {
     #divCarga {
       width: 90%;
       position: absolute;
-      top: 34%;
-      bottom: 34%;
+      top: 28%;
+      bottom: 32%;
       left: 0;
       right: 0;
       margin: auto;
