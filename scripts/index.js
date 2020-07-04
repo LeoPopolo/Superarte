@@ -91,7 +91,7 @@ function asignarEventos() {
 function mostrarNovedades(){
     
     window.location.replace(
-        "../index.html"
+        "https://leopopolo.github.io/Superarte/"
     );
 }
 
