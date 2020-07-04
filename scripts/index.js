@@ -61,6 +61,7 @@ function asignarEventos() {
     });
 
     $("#mostrarIconos").click(function(){
+        $("#divSeparacion").toggle();
         $("#ulNav").slideToggle();
         if(direccionFlecha == 1){
             $("#imgFlecha").css("-webkit-transform","rotate(-180deg)");
