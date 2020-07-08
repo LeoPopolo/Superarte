@@ -12,10 +12,6 @@ body {
   font-family: 'nunito', cursive;
 }
 
-#myCarousel{
-  box-shadow: 0px 0px 50px 21px rgba(0,0,0,0.75);
-}
-
 @media (min-width: 768px){
   .col-md-4 {
     max-width: 100%;
@@ -48,6 +44,8 @@ body {
 
 #ulNav{
   margin-left: 5%;
+  display: flex;
+  align-items: center;
 }
 
 #spinnerCarga{
@@ -370,8 +368,7 @@ body {
   #divRedes{
     width: 25%;
     float: right;
-    margin-right: 5%;
-    margin-top: 1.60%;
+    margin-left: 10%;
   }
 
   .seccionesMenu{
@@ -382,6 +379,12 @@ body {
 
 @media (max-width: 600px)
 {
+
+    body{
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
     header{
       display: flex;
@@ -408,10 +411,9 @@ body {
       padding: 0;
     }
 
-    /*#myCarousel{
-      margin-top: 25%;
-    }*/
-
+    #myCarousel{
+      box-shadow: 0px 0px 50px 21px rgba(0,0,0,0.75);
+    }
 
     .col-md-4 {
       max-width: 100%;
@@ -519,7 +521,8 @@ body {
       margin-left: 0;
     }
 
-    /*footer{
-      margin-top: 25%;
-    }*/
+    footer{
+      text-align: center;
+      margin-top: auto;
+    }
 }
