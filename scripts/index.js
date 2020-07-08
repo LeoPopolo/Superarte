@@ -4,8 +4,6 @@ let direccionFlecha = 1;
 
 function asignarEventos() {
     
-    window.sr = ScrollReveal();
-    
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
     $("#menuStaff").hide();
@@ -48,6 +46,8 @@ function asignarEventos() {
     });
 
     $("#loadPage").delay(1000).fadeOut("slow");    
+
+    window.sr = ScrollReveal();
     
     sr.reveal('header',{
         duration: 2000,

@@ -377,6 +377,20 @@ body {
     text-align: center;
   }
 
+@media (min-width: 610px) and (max-width: 800px){
+  header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #mostrarIconos{
+    display: none;
+  }
+}
+
 @media (max-width: 600px)
 {
 
@@ -465,6 +479,10 @@ body {
       margin-left: 0;
     }
 
+    main{
+      font-size: 16px;
+    }
+
     #divLogosFormacion{
       width: 100%;
       height: auto;
@@ -475,6 +493,7 @@ body {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
+      font-size: 14px;
     }
 
     #menuModalidades div article{
