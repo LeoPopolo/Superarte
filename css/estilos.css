@@ -412,13 +412,12 @@ body {
     }
 
     header{
-      display: flex;
       background-image: url("../img/bannerPc.jpg");
       background-size: cover;
       width: 100%;
-      height: auto;
-      justify-content: space-between;
-      align-items: center;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
     }
 
     #fotoSA{
@@ -430,8 +429,8 @@ body {
     
     #mostrarIconos{
       width: 10%;
-      float: left;
-      margin-right: 5%;
+      float: right;
+      margin-right: 10%;
       text-align: center;
       padding: 0;
     }
@@ -447,12 +446,15 @@ body {
     } 
 
     nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 0;
       margin: 0;
     }
 
     #divLogo{
-      width: 50%;
+      width: 40%;
       height: auto;
       padding: 5%;
       margin: 0;
@@ -464,30 +466,69 @@ body {
       width: 100%;
     }
 
-    nav > ul > li {
+    #divCloseNav{
+      float: left;
       width: 100%;
-      margin: 0;
+      margin-top: 10%;
+      margin-bottom: 10%;
     }
+
+    #btnCloseNav{
+      border: none;
+      background-color: transparent;
+      color: white;
+      float: right;
+      margin-right: 5%;
+      font-size: 3vh;
+    }
+
+    nav > ul > li {
+      width: 50%;
+      height: auto;
+      margin: 0;
+      margin-left: 25%;
+      float: left;
+    }
+
+    nav ul li a {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      padding: 20px;
+    }
+
+    #tituloHeader{
+      margin: 0;
+      margin-top: 20%;
+    }
+
+    #tituloHeader div h1{
+      font-size: 8vh;
+      line-height: 10vh;
+    }
+
+    #tituloHeader div h5{
+      margin-top: 10%;
+      font-size: 4vh;
+    }
+
 
     #divRedes{
       margin: 0;
       width: 100%;
-      padding-bottom: 7%;
-      padding-top: 5%;
+      bottom: 20vh;
     }
 
     .divRed{
       padding: 0;
       width: 12%;
       height: auto;
-      margin-left: 6.6%;
       margin-top: 3%;
     }
 
-    nav ul li a {
-      display: inline-block;
+    .red{
       width: 100%;
-      margin-left: 0;
+      height: auto;
     }
 
     main{
@@ -526,10 +567,16 @@ body {
     }
 
     #ulNav{
-      float: left;
+      width: 100%;
+      position: fixed;
       display: none;
       margin: 0;
-      padding-top: 5px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
     }
 
     #imgFlecha{
