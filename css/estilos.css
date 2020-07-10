@@ -51,6 +51,7 @@ body {
 }
 
 #ulNav{
+  font-size: 2vh;
   margin-left: 5%;
   display: flex;
   align-items: center;
@@ -87,6 +88,8 @@ body {
   }
 
   header {
+    display: flex;
+    justify-content: center;
     float: left;
     width: 100%;
     height: 100vh;
@@ -96,20 +99,10 @@ body {
     background-size: cover;
   }
 
-  #tituloHeader{
-    width: 100%;
-    text-align: center;
-  }
-
   #tituloHeader h1{
-    font-size: 7vw;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 6vw;
     color: #22abc9;
-  }
-  #tituloHeader h5{
-    margin-top: 2%;
-    font-size: 2vw;
-    font-family: 'Dancing Script', cursive;
-    color: rgb(252, 145, 252);
   }
 
   a:hover{
@@ -153,7 +146,7 @@ body {
     text-decoration: none !important;
     text-align: center;
     font-weight: 700;
-    padding: 20%;
+    padding: 24%;
     padding-right: 0;
     padding-left: 0;
   }
@@ -377,7 +370,6 @@ body {
     position: absolute;
     width: 25vw;
     float: left;
-    margin-left: 37.5vw;
     bottom: 25vh;
     align-items: center;
     justify-content: space-around;
@@ -514,25 +506,19 @@ body {
     }
 
     #tituloHeader div h1{
-      font-size: 8vh;
-      line-height: 10vh;
-    }
-
-    #tituloHeader div h5{
       margin-top: 10%;
-      font-size: 4vh;
+      font-size: 12vw;  
     }
-
 
     #divRedes{
       margin: 0;
-      width: 100%;
-      bottom: 20vh;
+      width: 90%;
+      bottom: 22vh;
     }
 
     .divRed{
       padding: 0;
-      width: 12%;
+      width: 10%;
       height: auto;
       margin-top: 3%;
     }
