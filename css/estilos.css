@@ -6,6 +6,9 @@ html{
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-image: url("../img/fondoWeb.png");
@@ -54,14 +57,11 @@ body {
   width: 30%;
   position: relative;
   margin-left: 35%;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
   #fotoSA{
-
-    margin-left: 8%;
-    margin-top: 3%;
-    width: 300px;
+    width: 100%;
     height: auto;
   }
 
@@ -71,8 +71,11 @@ body {
 
 
   #divLogo{
-    height: 100%;
-    padding-bottom: 4%;
+    float: left;
+    width: 10%;
+    height: auto;
+    padding: 10px;
+    margin-left: 3%;
   }
   
   #divLogo :hover{
@@ -80,12 +83,29 @@ body {
   }
 
   header {
+    float: left;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding-top: 50px;
     padding-bottom: 50px;
     background-image: url("../img/bannerPc.jpg");
     background-size: cover;
+  }
+
+  #tituloHeader{
+    width: 100%;
+    text-align: center;
+  }
+
+  #tituloHeader h1{
+    font-size: 7vw;
+    color: #22abc9;
+  }
+  #tituloHeader h5{
+    margin-top: 2%;
+    font-size: 2vw;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(252, 145, 252);
   }
 
   a:hover{
@@ -93,21 +113,24 @@ body {
   }
   
   nav {
+    background-color: black;
     width: 100%;
     position: relative;
     float: left;
-    background-color: black;
-    box-shadow: 1px 30px 30px 5px rgba(0,0,0,0.75)
   }
   
   nav ul {
     list-style: none;
     padding: 0;
     margin-bottom: 0.1%;
+    margin-right: 5vh;
+    width: 38%;
+    float: right;
+    height: auto;
   }
   
   nav > ul > li {
-    width: 15%;
+    width: 20%;
     float: left;
     height: 100%;
     position: relative;
@@ -126,7 +149,9 @@ body {
     text-decoration: none !important;
     text-align: center;
     font-weight: 700;
-    padding: 30px;
+    padding: 20%;
+    padding-right: 0;
+    padding-left: 0;
   }
   
   nav ul li a::before{
@@ -146,29 +171,6 @@ body {
     left: 0;
   }
 
-  nav ul li a::after{
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background-color: #22abc9;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transition: all .4s;
-  }
-
-  nav ul li a:hover::after{
-    width: 100%;
-    left: 0;
-  }
-  
-  nav ul ul {
-    position: absolute;
-    top: 100%;
-    background-color: #22abc9;
-    display: none;
-  }
   
   nav ul li:hover > ul {
     display: block;
@@ -224,13 +226,12 @@ body {
     background-color: black;
     width: 100%;
     height: auto;
-    padding-top: 40px;
-    padding-bottom: 10px;
+    padding: 10px;
     border-top: 2px solid black;
     float: left;
-  }
-  footer h2 {
-    color: #ffffff;
+    text-align: center;
+    margin-top: auto;
+    
   }
 
   footer div.menu nav{
@@ -246,10 +247,10 @@ body {
 
   p.copyright {
     width: 100%;
-    padding: 20px 0;
     text-align: center;
     color: #ffffff;
     float: left;
+    margin: 0;
   }
 
   #frmIngreso form{
@@ -354,22 +355,23 @@ body {
   }
 
   .divRed{
-    width: 16%;
+    width: 12%;
     height: auto;
     float: left;
     text-align: center;
-    margin-left: 3%;
-  }
-  
-  .red{
-    width: 75%;
-    height: 100%;
+    background-color: #22abc980;
+    border-radius: 50%;
   }
   
   #divRedes{
-    width: 25%;
-    float: right;
-    margin-left: 10%;
+    display: flex;
+    position: absolute;
+    width: 25vw;
+    float: left;
+    margin-left: 37.5vw;
+    bottom: 25vh;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .seccionesMenu{
@@ -545,8 +547,4 @@ body {
       margin-left: 0;
     }
 
-    footer{
-      text-align: center;
-      margin-top: auto;
-    }
 }

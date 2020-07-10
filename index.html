@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/estilos.css">
     
     <title>Superarte</title>
@@ -31,51 +33,60 @@
         </div>
     </span>
 
-    <header>
+    <nav>
         <div id="divLogo">
             <!-- <button type="button" class="btn btn-outline-light" id="btnIngresar">Iniciar sesion</button> -->
             <img src="img/superarteLogo.png" alt="Logo Superarte" id="fotoSA">
         </div>
+        <ul id="ulNav">  
+            <li class="divSecciones"><a href="#menuGaleria" id="btnGaleria">Galería</a></li>
+            <li class="divSecciones"><a href="#menuNosotros" id="btnNosotros">Nosotros</a></li>
+            <li class="divSecciones"><a href="#menuModalidades" id="btnModalidades">Formación</a></li>
+            <li class="divSecciones"><a href="#menuStaff" id="btnStaff">Staff</a></li>
+            <li class="divSecciones"><a href="#menuSedes" id="btnSedes">Sedes</a></li>      
+        </ul>
+    </nav> 
+
+    <header>
+        
         <div class="d-lg-none text-light" id="mostrarIconos">
             <img src="./img/flecha.png" width="100%" id="imgFlecha">
         </div>
-    </header>
-                <nav>
-                    <ul id="ulNav">  
-                        <li class="divSecciones"><a href="#menuNosotros" id="btnNosotros">Nosotros</a></li>
-                        <li class="divSecciones"><a href="#menuModalidades" id="btnModalidades">Formación</a></li>
-                        <li class="divSecciones"><a href="#menuStaff" id="btnStaff">Staff</a></li>
-                        <li class="divSecciones"><a href="#menuSedes" id="btnSedes">Sedes</a></li>
-                        <div id="divRedes">
-        
-                            <div class="divRed">
-                                <a class="ared" title="Whatsapp" href="https://api.whatsapp.com/send?phone=‎+5491121801491"><img src="./img/iconoWpp.png" alt="Whatsapp: 1121801491" class="red"/></a>
-                            </div>
-                            <div class="divRed">
-                                <a class="ared" title="Instagram" href="https://www.instagram.com/institutosuperarte/"><img src="./img/iconoIg.png" alt="Instagram: @institutosuperarte" class="red"/></a>
-                            </div>
-                            <div class="divRed">
-                                <a class="ared" title="Facebook" href="https://www.facebook.com/ISAformandoadoradores/"><img src="./img/iconoFb.png" alt="Facebook: Instituto Superarte" class="red"/></a>
-                            </div>
-                            <div class="divRed">
-                                <a class="ared" title="Twitter" href="https://twitter.com/_superarte?lang=en"><img src="./img/iconoTw.png" alt="Twitter: @_SuperArte" class="red"/></a>
-                            </div>
-                            <div class="divRed">
-                                <a class="ared" title="Youtube" href="https://www.youtube.com/channel/UC463Wd8a_nO0B7sRTV-ondQ"><img src="./img/iconoYt.png" alt="Youtube: Instituto Superarte" class="red"/></a>
-                            </div>
-                        </div>
-                        
-                    </ul>
-                </nav> 
-    
 
-    <!--<div id="frmIngreso" class="container">
-        
+        <div id="tituloHeader">
+            <div>
+                <h1>Formando adoradores</h1>
+            </div>
+            <div>
+                <h5>A través de las artes</h5>
+            </div>
+        </div>
+
+        <div id="divRedes">
+
+            <div class="divRed">
+                <a class="ared" title="Whatsapp" href="https://api.whatsapp.com/send?phone=‎+5491121801491"><img src="./img/iconoWpp.png" alt="Whatsapp: 1121801491" class="red"/></a>
+            </div>
+            <div class="divRed">
+                <a class="ared" title="Instagram" href="https://www.instagram.com/institutosuperarte/"><img src="./img/iconoIg.png" alt="Instagram: @institutosuperarte" class="red"/></a>
+            </div>
+            <div class="divRed">
+                <a class="ared" title="Facebook" href="https://www.facebook.com/ISAformandoadoradores/"><img src="./img/iconoFb.png" alt="Facebook: Instituto Superarte" class="red"/></a>
+            </div>
+            <div class="divRed">
+                <a class="ared" title="Twitter" href="https://twitter.com/_superarte?lang=en"><img src="./img/iconoTw.png" alt="Twitter: @_SuperArte" class="red"/></a>
+            </div>
+            <div class="divRed">
+                <a class="ared" title="Youtube" href="https://www.youtube.com/channel/UC463Wd8a_nO0B7sRTV-ondQ"><img src="./img/iconoYt.png" alt="Youtube: Instituto Superarte" class="red"/></a>
+            </div>
+        </div>
+    </header>    
+
+    <!--<div id="frmIngreso" class="container"> 
     </div>-->
 
-    <main id="menuNoticias">
+    <main id="menuGaleria">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -85,7 +96,6 @@
                             <li data-target="#myCarousel" data-slide-to="5"></li>
                         </ol>
                     
-                        <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active col-md-4 col-md-offset-4" >
                                 <img src="img/1.jpeg" alt="">
@@ -107,7 +117,6 @@
                             </div>
                         </div>
                     
-                        <!-- Controls -->
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous</span>
@@ -382,14 +391,6 @@ Para concretar este sueño, Dios acercó al pastor Alfredo Prieto y a todo un eq
     </div>
 
     <footer>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li id="liVolverArriba"><a href="#fotoSA" id="volverArriba">Volver Arriba</a></li>
-                    </ul>
-                </nav>
-            </div>
-
         <p class="copyright">
             SuperArte - Formando adoradores. 2020
         </p>

@@ -4,22 +4,15 @@ let direccionFlecha = 1;
 
 function asignarEventos() {
     
+    $("#menuGaleria").hide();
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
     $("#menuStaff").hide();
     $("#menuSedes").hide();
     
-    $("#btnIngresar").click(function(){
-        inyectarForm();
-    });
-    
-    $("#btnNosotros").click(function(){
+    /*$("#btnNosotros").click(function(){
         mostrarNosotros();
-    });
-    
-    $("#btnModalidades").click(function(){
-        mostrarModalidades();
-    });
+    });*/
     
     $("#ClickDevocional").click(function(){
         mostrarDevocional();
@@ -36,13 +29,25 @@ function asignarEventos() {
     $("#fotoSA").click(function(){
         mostrarNovedades();
     });
+
+    $("#btnModalidades").click(function(){
+        mostrarModalidades();
+    });
     
+    $("#btnGaleria").click(function(){
+        mostrarGaleria();
+    });
+
     $("#btnStaff").click(function(){
         mostrarStaff();
     });
     
     $("#btnSedes").click(function(){
         mostrarSedes();
+    });
+
+    $("#btnNosotros").click(function(){
+        mostrarNosotros();
     });
 
     $("#loadPage").delay(1000).fadeOut("slow");    
@@ -52,11 +57,6 @@ function asignarEventos() {
     sr.reveal('header',{
         duration: 2000,
         origin: 'left',
-        distance: '300px'
-    });
-    sr.reveal('#menuNoticias',{
-        duration: 2000,
-        origin: 'bottom',
         distance: '300px'
     });
 
@@ -84,7 +84,7 @@ function asignarEventos() {
 function mostrarNovedades(){
     
     window.location.replace(
-        "https://leopopolo.github.io/Superarte/"
+        "/index.html"
     );
 }
 
@@ -99,7 +99,7 @@ function mostrarModalidades(){
     cuadro3.style.borderColor = "black";
 
     $("#menuNosotros").hide();
-    $("#menuNoticias").hide();
+    $("#menuGaleria").hide();
     $("#menuStaff").hide();
     $("#menuSedes").hide();
 
@@ -157,12 +157,23 @@ function mostrarMinisterial(){
     
 }
 
+function mostrarGaleria(){
+
+    
+    $("#menuNosotros").hide();
+    $("#menuModalidades").hide();
+    $("#menuStaff").hide();
+    $("#menuSedes").hide();
+    $("#menuGaleria").fadeIn("slow");
+
+}
+
 function mostrarNosotros(){
 
     
     $("#menuNosotros").fadeIn("slow");
     $("#menuModalidades").hide();
-    $("#menuNoticias").hide();
+    $("#menuGaleria").hide();
     $("#menuStaff").hide();
     $("#menuSedes").hide();
 
@@ -172,7 +183,7 @@ function mostrarStaff(){
 
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
-    $("#menuNoticias").hide();
+    $("#menuGaleria").hide();
     $("#menuStaff").fadeIn("slow");
     $("#menuSedes").hide();
 
@@ -182,7 +193,7 @@ function mostrarSedes(){
 
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
-    $("#menuNoticias").hide();
+    $("#menuGaleria").hide();
     $("#menuStaff").hide();
     $("#menuSedes").fadeIn("slow");
 
