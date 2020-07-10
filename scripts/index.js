@@ -6,7 +6,6 @@ function asignarEventos() {
         interval: 2000
     });
 
-    $("#menuGaleria").hide();
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
     $("#menuStaff").hide();
@@ -33,13 +32,6 @@ function asignarEventos() {
             cerrarNav();
         }
         mostrarModalidades();
-    });
-    
-    $("#btnGaleria").click(function(){
-        if(screen.width < 601){
-            cerrarNav();
-        }
-        mostrarGaleria();
     });
 
     $("#btnStaff").click(function(){
@@ -171,17 +163,6 @@ function mostrarMinisterial(){
     cuadro2.style.borderColor = "black";
     cuadro3.style.borderColor = "#00b8e4";
     
-}
-
-function mostrarGaleria(){
-
-    
-    $("#menuNosotros").hide();
-    $("#menuModalidades").hide();
-    $("#menuStaff").hide();
-    $("#menuSedes").hide();
-    $("#menuGaleria").fadeIn("slow");
-
 }
 
 function mostrarNosotros(){
