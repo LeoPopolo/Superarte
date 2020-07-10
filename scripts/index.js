@@ -2,7 +2,10 @@
 window.onload = asignarEventos;
 
 function asignarEventos() {
-    
+    $('.carousel').carousel({
+        interval: 2000
+    });
+
     $("#menuGaleria").hide();
     $("#menuNosotros").hide();
     $("#menuModalidades").hide();
