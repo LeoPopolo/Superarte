@@ -46,6 +46,10 @@ body {
   margin-top: 12%;
 }
 
+#divCloseNav{
+  display: none;
+}
+
 #ulNav{
   margin-left: 5%;
   display: flex;
@@ -467,6 +471,7 @@ body {
     }
 
     #divCloseNav{
+      display: block;
       float: left;
       width: 100%;
       margin-top: 10%;
