@@ -393,6 +393,11 @@ body {
     justify-content: center;
   }
 
+  #menuGaleria{
+    width: 100%;
+    height: auto;
+  }
+
 @media (min-width: 601px) and (max-width: 1000px){
   header{
     display: flex;

@@ -12,10 +12,6 @@ function asignarEventos() {
     $("#menuStaff").hide();
     $("#menuSedes").hide();
     
-    /*$("#btnNosotros").click(function(){
-        mostrarNosotros();
-    });*/
-    
     $("#ClickDevocional").click(function(){
         mostrarDevocional();
     });
@@ -33,27 +29,37 @@ function asignarEventos() {
     });
 
     $("#btnModalidades").click(function(){
-        cerrarNav();
+        if(screen.width < 601){
+            cerrarNav();
+        }
         mostrarModalidades();
     });
     
     $("#btnGaleria").click(function(){
-        cerrarNav();
+        if(screen.width < 601){
+            cerrarNav();
+        }
         mostrarGaleria();
     });
 
     $("#btnStaff").click(function(){
-        cerrarNav();
+        if(screen.width < 601){
+            cerrarNav();
+        }
         mostrarStaff();
     });
     
     $("#btnSedes").click(function(){
-        cerrarNav();
+        if(screen.width < 601){
+            cerrarNav();
+        }
         mostrarSedes();
     });
 
     $("#btnNosotros").click(function(){
-        cerrarNav();
+        if(screen.width < 601){
+            cerrarNav();
+        }
         mostrarNosotros();
     });
 
@@ -94,7 +100,7 @@ function cerrarNav(){
 function mostrarNovedades(){
     
     window.location.replace(
-        "https://leopopolo.github.io/Superarte/"
+        "/index.html"
     );
 }
 
