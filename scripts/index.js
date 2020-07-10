@@ -101,6 +101,7 @@ function mostrarNovedades(){
     
     window.location.replace(
         "https://leopopolo.github.io/Superarte/"
+    );
 }
 
 function mostrarModalidades(){
