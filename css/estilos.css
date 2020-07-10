@@ -362,6 +362,10 @@ body {
     background-color: #22abc980;
     border-radius: 50%;
   }
+
+  .divRed:hover{
+    background-color: #22abc9;
+  }
   
   #divRedes{
     display: flex;
