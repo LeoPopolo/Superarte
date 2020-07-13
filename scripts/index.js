@@ -61,14 +61,6 @@ function asignarEventos() {
 
     $("#loadPage").delay(1000).fadeOut("slow");    
 
-    window.sr = ScrollReveal();
-    
-    sr.reveal('header',{
-        duration: 2000,
-        origin: 'left',
-        distance: '300px'
-    });
-
     $("#mostrarIconos").click(function(){
         $("#mostrarIconos").hide();
         $("#ulNav").slideToggle();
