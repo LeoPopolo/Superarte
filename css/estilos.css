@@ -426,7 +426,6 @@ img{
       position: absolute;
       float: left;
       width: 80%;
-      margin-left: 10%;
       margin-top: 80px;
       text-align: left;
     }
@@ -442,7 +441,6 @@ img{
       position: absolute;
       width: 60%;
       margin: 0;
-      margin-left: 20%;
       margin-top: 42vh;
     }
 
