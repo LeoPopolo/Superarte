@@ -70,17 +70,22 @@ img{
 }
 
 #spinnerCss{
-  width: 35px;
-  height: 35px;
+  box-sizing: content-box;
+  width: 45px;
+  height: 45px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 50%;
   border: 5px solid #22abc9;
   border-left: 5px solid #22abc960;
+  border-radius: 50%;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-duration: .8s;
-  animation-name: spinner-loading
+  animation-name: spinner-loading;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes spinner-loading{
@@ -89,6 +94,11 @@ img{
   } to {
       transform: rotate(1turn)
   }
+}
+
+#imgCorchea{
+  width: 70%;
+  height: auto;
 }
 
   #fotoSA{
