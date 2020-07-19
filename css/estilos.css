@@ -13,6 +13,7 @@ body {
   padding: 0;
   background-image: url("../img/fondoWeb.png");
   background-size: cover;
+  background-attachment: fixed;
   font-family: 'nunito', cursive;
 }
 
@@ -394,6 +395,17 @@ img{
     margin-top: 10%;
     width: 100%;
   }
+  
+  #divRedes{
+    --animate-delay: 2.7s;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: space-around;
+    float: left;
+    width: 25vw;
+    bottom: 18vh;
+  }
 
   .divRed{
     width: 12%;
@@ -407,17 +419,7 @@ img{
   .divRed:hover{
     transition: all .5s;
     background-color: #22abc9;
-  }
-  
-  #divRedes{
-    --animate-delay: 2.8s;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    justify-content: space-around;
-    float: left;
-    width: 25vw;
-    bottom: 18vh;
+    animation-name: rotateIn;
   }
 
   .seccionesMenu{
@@ -543,7 +545,7 @@ img{
       display: block;
       float: left;
       width: 100%;
-      margin-top: 10%;
+      margin-top: 7.5%;
       margin-bottom: 10%;
     }
 
@@ -552,7 +554,7 @@ img{
       background-color: transparent;
       color: white;
       float: right;
-      margin-right: 5%;
+      margin-right: 9%;
       font-size: 3vh;
     }
 
