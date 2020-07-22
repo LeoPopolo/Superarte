@@ -1,5 +1,8 @@
-html{
+*{
   box-sizing: border-box;
+}
+
+html{
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -131,7 +134,7 @@ img{
     justify-content: center;
     float: left;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding-top: 50px;
     padding-bottom: 50px;
     box-shadow: 0 30px 50px 10px black;
@@ -419,8 +422,15 @@ img{
   .divRed:hover{
     transition: all .5s;
     background-color: #22abc9;
-    animation-name: rotateIn;
+    animation: 2s rotate360 infinite linear;
   }
+
+  @keyframes rotate360 { 
+
+      to { 
+          transform: rotate(360deg); 
+      } 
+  } 
 
   .seccionesMenu{
     display: flex;
@@ -467,7 +477,6 @@ img{
     #contenedorDivs{
         width: 100vw;
         height: 100%;
-        box-sizing: border-box;
     } 
 
     #tituloHeader{  
