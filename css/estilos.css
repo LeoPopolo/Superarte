@@ -586,6 +586,10 @@ img{
       font-size: 16px;
     }
 
+    .seccionesMenu{
+      margin-top: 15%;
+    }
+
     #divLogosFormacion{
       width: 100%;
       height: auto;
