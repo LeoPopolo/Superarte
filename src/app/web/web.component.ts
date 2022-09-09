@@ -174,7 +174,7 @@ export class WebComponent {
 
     setTimeout(() => {
 
-      this.getIsActive(section) ? this.panelStyle.width = '0' : this.panelStyle.width = '30vw';
+      this.getIsActive(section) ? this.panelStyle.width = '0' : this.panelStyle.width = '40vw';
       this.transformArrow(section);
       this.setActive(section);
 
@@ -185,8 +185,12 @@ export class WebComponent {
       }, 150);
     }, 150);
 
+    if (window.screen.width <= 1366)
+      this.panelStyle.top = '-5.5%';
+    else
+      this.panelStyle.top = '-4.3%';
+
     this.panelStyle.left = elementInfo.right + 'px';
-    this.panelStyle.top = 'calc(0px - 4.3%)';
   }
 
   getIsActive(section: string) {
