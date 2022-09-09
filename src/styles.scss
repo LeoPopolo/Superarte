@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: 'bahnschrift';
+  font-weight: 100;
+}
+
+body {
+  overflow: hidden;
+}
+
+:root {
+  --superarte-yellow: #fcc016;
+  --superarte-green: #38b6a3;
+  --superarte-light-blue: #77dbf2;
+  --superarte-violet: #bf9dbd;
+}
+
+@font-face {
+  font-family: 'bahnschrift';
+  src: url('./assets/bahnschrift/BAHNSCHRIFT.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 1.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 2.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 3.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 4.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 5.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 6.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 7.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 8.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 9.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 10.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 11.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 12.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 13.TTF') format('truetype'),
+        url('./assets/bahnschrift/BAHNSCHRIFT 14.TTF') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./assets/bebas-neue/BebasNeue-Regular.eot'),
+        url('./assets/bebas-neue/BebasNeue-Regular.ttf') format('truetype'),
+        url('./assets/bebas-neue/BebasNeue-Regular.woff') format('woff'),
+        url('./assets/bebas-neue/BebasNeue-Regular.woff2') format('woff2'),
+        url('./assets/bebas-neue/BebasNeue-Regular.otf') format('otf');
+  font-style: normal;
+  font-weight: normal;
+}

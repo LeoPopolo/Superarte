@@ -1,0 +1,153 @@
+<main>
+  <header>
+    <div class="container">
+      <div class="logo" (click)="toggleSection('inicio')">
+        <img src="../../assets/superarteLogo.png" alt="Superarte logo">
+      </div>
+      <div class="sections">
+        <span (click)="toggleSection('nosotros')" [ngClass]="{'active-green': sectionsColor.nosotros}">Nosotros</span>
+        <span (click)="toggleSection('formacion')" [ngClass]="{'active-violet': sectionsColor.formacion}">Formación</span>
+        <span (click)="toggleSection('staff')" [ngClass]="{'active-yellow': sectionsColor.staff}">Staff</span>
+        <span (click)="toggleSection('sedes')" [ngClass]="{'active-light-blue': sectionsColor.sedes}">Sedes</span>
+      </div>
+    </div>
+  </header>
+
+  <section [ngStyle]="{'left': sectionsLeft.inicio}">
+    <article class="text">
+      <div class="words">
+        <span>VIDA</span>
+        <span>ARTE</span>
+        <span>ADORACIÓN</span>
+
+        <div class="yellow-circle"></div>
+      </div>
+      <div class="btn-login">
+        <button>ACCEDER</button>
+      </div>
+    </article>
+    <article class="social">
+      <div (click)="navigate('wp')"><img src="../../assets/social/1.png" alt="whatsapp"></div>
+      <div (click)="navigate('fb')"><img src="../../assets/social/2.png" alt="facebook"></div>
+      <div (click)="navigate('ig')"><img src="../../assets/social/3.png" alt="instagram"></div>
+      <div (click)="navigate('tw')"><img src="../../assets/social/4.png" alt="twitter"></div>
+      <div (click)="navigate('yt')"><img src="../../assets/social/5.png" alt="youtube"></div>
+    </article>
+  </section>
+
+  <section [ngStyle]="{'left': sectionsLeft.nosotros}">
+    <article class="nosotros">
+      <div [ngClass]="{'move-right': showNosotrosPanel}">
+        <span>NOSOTROS</span>
+      </div>
+      <div>
+        <span (click)="openNosotrosPanel('mision')">MISIÓN</span>
+        <span (click)="openNosotrosPanel('vision')">VISIÓN</span>
+        <span (click)="openNosotrosPanel('historia')">HISTORIA</span>
+        <span (click)="openNosotrosPanel('pilares')">PILARES</span>
+      </div>
+      <div class="circles">
+        <span class="yellow-circle"></span>
+        <span class="violet-outlined-circle"></span>
+      </div>
+      <div class="panel-nosotros" [ngStyle]="nosotrosPanelStyles" (click)="togglePanel('')" *ngIf="showNosotrosPanel">
+        <div class="panel-nosotros-container" [innerHTML]="nosotrosText">
+
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section [ngStyle]="{'left': sectionsLeft.formacion}">
+    <article class="formacion">
+      <div class="container">
+        <div #medios (click)="expandSection(this['medios'], 'medios')">
+          <h2>MEDIOS</h2>
+          <img src="../../assets/right arrow.png" [ngStyle]="mediosData.styles">
+        </div>
+        <div #artes (click)="expandSection(this['artes'], 'artes')">
+          <h2>ARTES PLÁSTICAS</h2>
+          <img src="../../assets/right arrow.png" [ngStyle]="artesData.styles">
+        </div>
+        <div #musica (click)="expandSection(this['musica'], 'musica')">
+          <h2>MÚSICA</h2>
+          <img src="../../assets/right arrow.png" [ngStyle]="musicaData.styles">
+        </div>
+        <div #grabacion (click)="expandSection(this['grabacion'], 'grabacion')">
+          <h2>GRABACIÓN</h2>
+          <img src="../../assets/right arrow.png" [ngStyle]="grabacionData.styles">
+        </div>
+        <div #ministerial (click)="expandSection(this['ministerial'], 'ministerial')">
+          <h2>MINISTERIAL</h2>
+          <img src="../../assets/black right arrow.png" [ngStyle]="ministerialData.styles">
+        </div>
+      </div>
+      <div class="panel-info" [ngStyle]="panelStyle" [innerHTML]="panelText"></div>
+    </article>
+  </section>
+
+  <section [ngStyle]="{'left': sectionsLeft.staff}">
+    <article class="staff">
+      <div class="images">
+        <div>
+          <div>
+            <img src="../../assets/pastores.png" alt="Pastores Pedro y Gertrudis Ibarra">
+          </div>
+          <div class="names">
+            <span class="title">PASTORES:</span>
+            <span>PEDRO Y GERTRUDIS IBARRA</span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="../../assets/pastor prieto.png" alt="Pastor Alfredo Prieto">
+          </div>
+          <div class="names">
+            <span class="title">DIRECTOR:</span>
+            <span>ALFREDO PRIETO</span>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="info-yellow-circle">
+          <div>
+            <b>Coordinador general</b>
+            <span>Maximiliano Martinez</span>
+          </div>
+          <div>
+            <b>Responsable de profesores de música</b>
+            <span>Paula Bof</span>
+          </div>
+          <div>
+            <b>Responsable administrativa</b>
+            <span>Agustina Rondinoni</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section [ngStyle]="{'left': sectionsLeft.sedes}">
+    <article class="sedes">
+      <div class="content">
+        <img src="../../assets/right arrow.png">
+        <h2>BERISO</h2>
+        <span class="blue-line blue-line-1"></span>
+        <div>
+          <p>E-Mail: Institutosuperartebsso@gmail.com</p>
+          <p>Dirección: Av. Génova 3143, 1923 Berisso</p>
+          <p>Teléfono: 11 4224-7372</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <img src="../../assets/right arrow.png">
+        <h2>PRINGLES</h2>
+        <span class="blue-line blue-line-2"></span>
+        <div>
+          <p>E-Mail: superartepringles@gmail.com</p>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
