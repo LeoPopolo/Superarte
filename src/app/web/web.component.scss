@@ -67,6 +67,10 @@ main {
       font-family: 'Bebas Neue';
       line-height: 1em;
       font-size: 11em;
+
+      @media screen and (max-width: 1370px) {
+        font-size: 8em;
+      }
     }
 
     h1 {
@@ -160,6 +164,10 @@ main {
         align-items: center;
         gap: 3em;
 
+        @media screen and (max-width: 1370px) {
+          gap: 2em;
+        }
+
         span {
           border-radius: 100px;
           background-color: #fff;
@@ -168,6 +176,10 @@ main {
           padding: .2em 1em;
           text-align: center;
           cursor: pointer;
+
+          @media screen and (max-width: 1370px) {
+            font-size: 3em;
+          }
         }
       }
 
@@ -229,12 +241,20 @@ main {
                 border-radius: 30px;
                 color: #fff;
                 padding: .2em 1em;
+
+                @media screen and (max-width: 1370px) {
+                  font-size: 3em;
+                }
               }
 
               h3 {
                 font-size: 2.5em;
                 color: #252523;
                 text-align: center;
+
+                @media screen and (max-width: 1370px) {
+                 font-size: 1.5em;
+                }
               }
             }
           }
@@ -259,6 +279,10 @@ main {
               h3 {
                 font-size: 2em;
 
+                @media screen and (max-width: 1370px) {
+                  font-size: 1.5em;
+                }
+
                 span {
                   font-size: 2.5em;
                   color: var(--superarte-light-blue);
@@ -268,6 +292,10 @@ main {
               .subtitle {
                 font-size: 2.5em;
                 margin-top: 1em;
+
+                @media screen and (max-width: 1370px) {
+                  font-size: 2em;
+                }
               }
             }
 
@@ -284,6 +312,10 @@ main {
                 color: #252523;
                 text-align: center;
                 margin-top: 1em;
+
+                @media screen and (max-width: 1370px) {
+                 font-size: 1.5em;
+                }
               }
             }
 
@@ -297,9 +329,14 @@ main {
               display: block;
 
               h3 {
+                margin-top: 1em;
                 span {
                   font-size: 2em;
                   color: var(--superarte-yellow);
+
+                  @media screen and (max-width: 1370px) {
+                    font-size: 1.5em;
+                  }
                 }
               }
 
@@ -308,6 +345,10 @@ main {
                 color: #252523;
                 text-align: center;
                 margin-top: 1em;
+
+                @media screen and (max-width: 1370px) {
+                 font-size: 1.2em;
+                }
               }
             }
 
@@ -330,6 +371,11 @@ main {
         position: absolute;
         top: 13.5vh;
         left: -3.5vw;
+
+        @media screen and (max-width: 1370px) {
+          top: 6vh;
+          left: -0.8vw;
+        }
 
         >div {
           display: flex;
@@ -524,6 +570,10 @@ main {
 
             img {
               width: 80%;
+
+              @media screen and (max-width: 1370px) {
+                width: 60%;
+              }
             }
 
             span {
@@ -566,6 +616,10 @@ main {
               font-size: 2em;
               font-family: 'bahnschrift';
               color: #252523;
+
+              @media screen and (max-width: 1370px) {
+                font-size: 1.5em;
+              }
             }
 
             b {
@@ -625,6 +679,10 @@ main {
           p {
             font-size: 2em;
             color: #252523;
+
+            @media screen and (max-width: 1370px) {
+              font-size: 1.5em;
+            }
           }
         }
       }
