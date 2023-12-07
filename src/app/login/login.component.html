@@ -1,0 +1,33 @@
+<section class="Login">
+  <img class="Login__background" src="../../assets/bannerPc.jpg">
+
+  <div class="Login__logo" routerLink="/web">
+    <img src="../../assets/superarteLogo.png" alt="Superarte logo">
+  </div>
+
+  <div class="Wrapper">
+    <form class="Login__form" [formGroup]="form">
+      <h1 class="Login__form__title">Ingreso al campus</h1>
+
+      <div class="Login__form__control">
+        <label class="Login__form__control__label">Usuario</label>
+        <input class="Login__form__control__input" type="text" formControlName="username">
+        <span class="Login__form__control__error" *ngIf="hasError('username', 'required')">El nombre de usuario es obligatorio</span>
+      </div>
+
+      <div class="Login__form__control">
+        <label class="Login__form__control__label">Contraseña</label>
+        <input class="Login__form__control__input" type="password" formControlName="password">
+        <span class="Login__form__control__error" *ngIf="hasError('password', 'required')">La contraseña es obligatoria</span>
+      </div>
+
+      <button class="Login__form__button" (click)="login()">
+        Acceder
+      </button>
+
+    </form>
+
+    <span class="yellowCircle"></span>
+  </div>
+
+</section>

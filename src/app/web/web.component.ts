@@ -411,7 +411,7 @@ export class WebComponent {
         <div class="panel-nosotros-container-vision-content">
           <h3 class="subtitle">Brindar los fundamentos bíblicos y técnicos sobre los cuales el alumno pueda:</h3>
           </br>
-          <h3><span>.</span>Desarrollar una vida de adoración e intimidad con Dios</h3>
+          <h3><span>.</span>Desarrollar una vida de adoración integral e intimidad con Dios</h3>
           <h3><span>.</span>Levantar el nombre de Jesús a través de las diferentes expresiones artísticas.</h3>
         </div>
       </div>

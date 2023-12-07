@@ -1,3 +1,5 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +18,14 @@ body {
   --superarte-green: #38b6a3;
   --superarte-light-blue: #77dbf2;
   --superarte-violet: #bf9dbd;
+
+  --superarte-black: #252525;
+  --superarte-grey-one: #505050;
+  --superarte-grey-two: #757575;
+  --superarte-grey-three: #aaaaaa;
+  --superarte-grey-four: #cccccc;
+  --superarte-grey-five: #eeeeee;
+  --superarte-white: #fbfbfb;
 }
 
 @font-face {

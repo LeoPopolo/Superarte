@@ -1,0 +1,95 @@
+.Login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+  }
+
+  &__logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    z-index: 99;
+
+    img {
+      height: 70px;
+      margin: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .Wrapper {
+    position: relative;
+    margin-top: 10%;
+  }
+
+  &__form {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    z-index: 20;
+
+    &__title {
+      text-align: center;
+      font-size: 2em;
+      color: var(--superarte-violet);
+    }
+
+    &__control {
+      display: flex;
+      flex-direction: column;
+
+      &__label {
+        color: #eee;
+      }
+
+      &__input {
+        border: 1px solid var(--superarte-light-blue);
+        border-radius: 5px;
+        color: #eee;
+        padding: 10px;
+        background-color: transparent;
+        outline: none;
+      }
+
+      &__error {
+        color: #ff006a;
+        margin-top: 5px;
+        font-size: 12px;
+      }
+    }
+
+    &__button {
+      background-color: var(--superarte-green);
+      color: #eee;
+      border-radius: 100px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+  }
+
+  .yellowCircle {
+    content: '';
+    border-radius: 50%;
+    background-color: var(--superarte-yellow);
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    z-index: 10;
+  }
+}

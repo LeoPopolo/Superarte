@@ -1,0 +1,34 @@
+.Sidebar {
+  height: 100%;
+  width: 300px;
+  background-color: var(--superarte-black);
+
+  &__content {
+    height: max-content;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding-top: 2em;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-left: 1em;
+      gap: 10px;
+      cursor: pointer;
+
+      &__icon {
+        color: var(--superarte-green);
+      }
+
+      &__label {
+        color: var(--superarte-white);
+      }
+
+      &--logout {
+        position: absolute;
+        bottom: 1em;
+      }
+    }
+  }
+}
