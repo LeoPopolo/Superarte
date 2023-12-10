@@ -1,1 +1,13 @@
-<p>inscriptions works!</p>
+<div class="Wrapper">
+  <section class="Inscriptions">
+    <header class="Inscriptions__header">
+      <h1 class="Inscriptions__header__title">Mis materias</h1>
+    </header>
+    <section class="Inscriptions__body">
+      <app-inscription-card
+        *ngFor="let item of inscriptions"
+        [inscription]="item"
+      ></app-inscription-card>
+    </section>
+  </section>
+</div>

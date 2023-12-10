@@ -1,1 +1,30 @@
-<p>profile works!</p>
+<div class="Wrapper">
+  <section class="Profile">
+    <header class="Profile__header">
+      <h1 class="Profile__header__title">Mi perfil</h1>
+    </header>
+    <section class="Profile__body">
+      <form class="Profile__body__form" [formGroup]="form">
+        <div class="Profile__body__form__control">
+          <label class="Profile__body__form__control__label">Nombre</label>
+          <input type="text" class="Profile__body__form__control__input Input" formControlName="name">
+        </div>
+        <div class="Profile__body__form__control">
+          <label class="Profile__body__form__control__label">Apellido</label>
+          <input type="text" class="Profile__body__form__control__input Input" formControlName="last_name">
+        </div>
+        <div class="Profile__body__form__control">
+          <label class="Profile__body__form__control__label">DNI</label>
+          <input type="text" class="Profile__body__form__control__input Input" formControlName="username">
+        </div>
+        <div class="Profile__body__form__control">
+          <label class="Profile__body__form__control__label">Fecha de nacimiento</label>
+          <input type="date" class="Profile__body__form__control__input Input" formControlName="birthdate">
+        </div>
+      </form>
+      <div class="Profile__body__changePassword">
+        <span class="Profile__body__changePassword__button">Cambiar contraseña</span>
+      </div>
+    </section>
+  </section>
+</div>

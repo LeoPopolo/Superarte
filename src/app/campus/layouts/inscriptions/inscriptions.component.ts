@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InscriptionService } from '../../services/inscription.service';
+import { Inscription } from '../../models/inscription';
 
 @Component({
   selector: 'app-inscriptions',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InscriptionsComponent implements OnInit {
 
-  constructor() { }
+  inscriptions: Inscription[] = [];
+
+  constructor(
+    private inscriptionService: InscriptionService
+  ) { }
 
   ngOnInit(): void {
+    this.getInscriptions();
+  }
+
+  getInscriptions() {
+    const userData = JSON.parse(localStorage.getItem('userData')!);
+
+    this.inscriptionService.getPupilInscriptions(userData.id).subscribe(data => {
+      this.inscriptions = data.data;
+    });
   }
 
 }

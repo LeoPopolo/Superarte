@@ -20,11 +20,12 @@ body {
   --superarte-violet: #bf9dbd;
 
   --superarte-black: #252525;
-  --superarte-grey-one: #505050;
-  --superarte-grey-two: #757575;
-  --superarte-grey-three: #aaaaaa;
-  --superarte-grey-four: #cccccc;
-  --superarte-grey-five: #eeeeee;
+  --superarte-medium-dark: #303030;
+  --superarte-grey-one: #404040;
+  --superarte-grey-two: #606060;
+  --superarte-grey-three: #808080;
+  --superarte-grey-four: #aaaaaa;
+  --superarte-grey-five: #cccccc;
   --superarte-white: #fbfbfb;
 }
 
@@ -58,4 +59,13 @@ body {
         url('./assets/bebas-neue/BebasNeue-Regular.otf') format('otf');
   font-style: normal;
   font-weight: normal;
+}
+
+.Input {
+  border: 1px solid var(--superarte-light-blue);
+  border-radius: 5px;
+  color: #eee;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
 }

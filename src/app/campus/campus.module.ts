@@ -10,6 +10,8 @@ import { SubjectManagementComponent } from './layouts/subject-management/subject
 import { UserManagementComponent } from './layouts/user-management/user-management.component';
 import { ProfileComponent } from './layouts/profile/profile.component';
 import { InscriptionsComponent } from './layouts/inscriptions/inscriptions.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InscriptionCardComponent } from './components/inscription-card/inscription-card.component';
 
 const materialModules = [ MatIconModule ];
 
@@ -21,10 +23,12 @@ const materialModules = [ MatIconModule ];
     UserManagementComponent,
     ProfileComponent,
     InscriptionsComponent,
+    InscriptionCardComponent,
   ],
   imports: [
     CommonModule,
     CampusRoutingModule,
+    ReactiveFormsModule,
     ...materialModules
   ],
 })

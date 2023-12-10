@@ -1,0 +1,22 @@
+.Card {
+  padding: 1em;
+  border-radius: 15px;
+  background-color: var(--superarte-grey-one);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+
+  span {
+    color: var(--superarte-white);
+  }
+
+  &__title {
+    color: var(--superarte-light-blue);
+    font-size: 1.5em;
+  }
+
+  &__status {
+    color: var(--superarte-violet) !important;
+  }
+}

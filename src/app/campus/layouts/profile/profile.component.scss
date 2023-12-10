@@ -1,0 +1,60 @@
+.Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+
+  .Profile {
+    background-color: var(--superarte-black);
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+
+    &__header {
+      color: var(--superarte-yellow);
+      font-size: 2em;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--superarte-grey-one);
+    }
+
+    &__body {
+      margin-top: 20px;
+      display: flex;
+
+      &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &__control {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          &__label {
+            color: var(--superarte-white);
+          }
+
+          &__input {
+            width: 250px;
+          }
+        }
+      }
+
+      &__changePassword {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        &__button {
+          color: var(--superarte-violet);
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
