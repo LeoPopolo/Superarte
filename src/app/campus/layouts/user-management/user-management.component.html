@@ -1,1 +1,45 @@
-<p>user-management works!</p>
+<div class="Wrapper">
+  <section class="Users">
+    <header class="Users__header">
+      <h1 class="Users__header__title">Alumnos</h1>
+      <button class="Users__header__button Button" (click)="openDialogCreateUser()"> <mat-icon>add</mat-icon> <span>Nuevo usuario</span> </button>
+    </header>
+    <section class="Users__body">
+
+      <section class="Table">
+        <div class="Table__header">
+          <div>Nombre</div>
+          <div>Apellido</div>
+          <div>DNI</div>
+          <div>Fecha nacimiento</div>
+          <div>Teléfono</div>
+          <div>Dirección</div>
+          <div>E-mail</div>
+          <div>Acciones</div>
+        </div>
+        <div class="Table__body">
+          <div class="Table__body__item" *ngFor="let item of users">
+            <div class="Table__body__item__col">{{item.name}}</div>
+            <div class="Table__body__item__col">{{item.last_name}}</div>
+            <div class="Table__body__item__col">{{item.username}}</div>
+            <div class="Table__body__item__col">{{item.birthdate | date:'dd-MM-yyyy'}}</div>
+            <div class="Table__body__item__col">{{item.contact_information.phone_number}}</div>
+            <div class="Table__body__item__col">{{item.contact_information.address}}</div>
+            <div class="Table__body__item__col">{{item.contact_information.email}}</div>
+            <div class="Table__body__item__col">
+              <mat-icon class="Table__body__item__col--actions" [matMenuTriggerFor]="actionsMenu">more_vert</mat-icon>
+
+              <mat-menu #actionsMenu="matMenu">
+                <span mat-menu-item> <mat-icon>edit</mat-icon> Editar</span>
+                <span mat-menu-item> <mat-icon>delete</mat-icon> Eliminar</span>
+                <span mat-menu-item (click)="openDialogCreateInscription(item.id)"> <mat-icon>post_add</mat-icon> Asignar materia</span>
+              </mat-menu>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </section>
+</div>

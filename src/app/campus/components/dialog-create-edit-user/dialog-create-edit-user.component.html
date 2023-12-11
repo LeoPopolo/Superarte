@@ -1,0 +1,62 @@
+<section class="New">
+  <header class="New__header">
+    <h1 class="New__header__title">Nuevo usuario</h1>
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+  </header>
+  <section class="New__body">
+    <form class="New__body__form" [formGroup]="form">
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Nombre</label>
+        <input class="New__body__form__control__input Input" type="text" formControlName="name">
+        <span class="New__body__form__control__error" *ngIf="hasError('name', 'required')">El nombre es obligatorio</span>
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Apellido</label>
+        <input class="New__body__form__control__input Input" type="text" formControlName="last_name">
+        <span class="New__body__form__control__error" *ngIf="hasError('last_name', 'required')">El apellido es obligatorio</span>
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">DNI</label>
+        <input class="New__body__form__control__input Input" type="text" formControlName="username">
+        <span class="New__body__form__control__error" *ngIf="hasError('username', 'required')">El DNI es obligatorio</span>
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Fecha nacimiento</label>
+        <input class="New__body__form__control__input Input" type="date" formControlName="birthdate">
+        <!-- <span class="New__body__form__control__error" *ngIf="hasError('birthdate', 'required')">La fecha de nacimiento es obligatorio</span> -->
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Sexo</label>
+        <select class="New__body__form__control__input Input" formControlName="gender">
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
+        </select>
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Teléfono</label>
+        <input class="New__body__form__control__input Input" type="text" formControlName="phone_number">
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Dirección</label>
+        <input class="New__body__form__control__input Input" type="text" formControlName="address">
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Email</label>
+        <input class="New__body__form__control__input Input" type="email" formControlName="email">
+      </div>
+
+    </form>
+  </section>
+
+  <footer class="New__footer">
+    <button class="Button" (click)="createUser()">Aceptar</button>
+  </footer>
+</section>

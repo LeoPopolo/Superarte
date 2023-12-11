@@ -33,6 +33,10 @@
       <div (click)="navigate('tw')"><img src="../../assets/social/4.png" alt="twitter"></div>
       <div (click)="navigate('yt')"><img src="../../assets/social/5.png" alt="youtube"></div>
     </article>
+
+    <article class="idp-logo">
+      <img src="../../assets/Logo idp.png">
+    </article>
   </section>
 
   <section [ngStyle]="{'left': sectionsLeft.nosotros}">
@@ -50,7 +54,8 @@
         <span class="yellow-circle"></span>
         <span class="violet-outlined-circle"></span>
       </div>
-      <div class="panel-nosotros" [ngStyle]="nosotrosPanelStyles" (click)="togglePanel('')" *ngIf="showNosotrosPanel">
+      <div class="panel-nosotros" [ngStyle]="nosotrosPanelStyles" *ngIf="showNosotrosPanel">
+        <span class="panel-nosotros-close" (click)="togglePanel('')"><mat-icon>close</mat-icon></span>
         <div class="panel-nosotros-container" [innerHTML]="nosotrosText">
 
         </div>

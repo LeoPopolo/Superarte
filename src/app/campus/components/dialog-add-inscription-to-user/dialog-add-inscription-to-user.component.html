@@ -1,0 +1,40 @@
+<section class="New">
+  <header class="New__header">
+    <h1 class="New__header__title">Nueva inscripción</h1>
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+  </header>
+  <section class="New__body">
+    <form class="New__body__form" [formGroup]="form">
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Materia</label>
+        <select class="New__body__form__control__input Input" formControlName="subject_id">
+          <option *ngFor="let item of subjects" [value]="item.id">{{item.name}}</option>
+        </select>
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Profesor</label>
+        <select class="New__body__form__control__input Input" formControlName="teacher_id">
+          <option *ngFor="let item of teachers" [value]="item.id">{{item.name}} {{item.last_name}}</option>
+        </select>
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Día de clases</label>
+        <select class="New__body__form__control__input Input" formControlName="class_day">
+          <option *ngFor="let item of classDays" [value]="item">{{item}}</option>
+        </select>
+      </div>
+
+      <div class="New__body__form__control">
+        <label class="New__body__form__control__label">Horario de clase</label>
+        <input class="New__body__form__control__input Input" type="time" formControlName="class_hour">
+      </div>
+    </form>
+  </section>
+
+  <footer class="New__footer">
+    <button class="Button" (click)="createInscription()">Aceptar</button>
+  </footer>
+</section>

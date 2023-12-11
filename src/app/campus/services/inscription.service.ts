@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Inscription } from '../models/inscription';
+import { Inscription, InscriptionRequest } from '../models/inscription';
 
 type InscriptionResponse = { data: Inscription[] };
 
@@ -14,6 +14,11 @@ export class InscriptionService {
   constructor(
     private httpClient: HttpClient
   ) { }
+
+  createInscription(inscription: InscriptionRequest) {
+
+    return this.httpClient.post<InscriptionResponse>(`${this.apiUrl}/inscription`, inscription);
+  }
 
   getPupilInscriptions(pupilId: number) {
 

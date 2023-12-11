@@ -61,6 +61,19 @@ body {
   font-weight: normal;
 }
 
+
+.Button {
+  background-color: var(--superarte-green);
+  color: #eee;
+  border-radius: 100px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .Input {
   border: 1px solid var(--superarte-light-blue);
   border-radius: 5px;
@@ -68,4 +81,13 @@ body {
   padding: 10px;
   background-color: transparent;
   outline: none;
+
+  option {
+    color: var(--superarte-black);
+  }
+}
+
+.mat-dialog-container  {
+  padding: 0 !important;
+  background-color: transparent;
 }

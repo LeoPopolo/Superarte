@@ -186,9 +186,9 @@ export class WebComponent {
     }, 150);
 
     if (window.screen.width <= 1366)
-      this.panelStyle.top = '-5.5%';
+      this.panelStyle.top = '-4.2vh';
     else
-      this.panelStyle.top = '-4.3%';
+      this.panelStyle.top = '-1vh';
 
     this.panelStyle.left = elementInfo.right + 'px';
   }

@@ -10,6 +10,7 @@ main {
     .container {
       border-bottom: 2px solid #fff;
       display: flex;
+      align-items: center;
       justify-content: space-between;
       padding: 2em 0;
 
@@ -66,7 +67,7 @@ main {
     span {
       font-family: 'Bebas Neue';
       line-height: 1em;
-      font-size: 11em;
+      font-size: 10em;
 
       @media screen and (max-width: 1370px) {
         font-size: 8em;
@@ -75,6 +76,16 @@ main {
 
     h1 {
       color: #fff;
+    }
+
+    .idp-logo {
+      position: absolute;
+      right: 5vw;
+      bottom: 36vh;
+
+      img {
+        width: 10vw;
+      }
     }
 
     .text {
@@ -95,10 +106,10 @@ main {
           position: absolute;
           border-radius: 50%;
           background-color: var(--superarte-yellow);
-          width: 7vw;
-          height: 7vw;
-          bottom: 5em;
-          right: -4em;
+          width: 8vw;
+          height: 8vw;
+          bottom: 4em;
+          right: -6em;
           z-index: 5;
         }
       }
@@ -222,7 +233,24 @@ main {
         justify-content: center;
         align-items: center;
         transition: all 250ms;
-        .panel-nosotros-container {
+
+        &-close {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          mat-icon {
+            height: 34px;
+            width: 34px;
+            font-size: 34px;
+          }
+        }
+
+        &-container {
           width: 70%;
           height: 75%;
 
@@ -259,9 +287,9 @@ main {
             }
           }
 
-          .panel-nosotros-container-mision {
+          &-mision {
 
-            .panel-nosotros-container-mision-content {
+            &-content {
               height: 80%;
               padding-top: 5%;
             }
@@ -271,9 +299,9 @@ main {
             }
           }
 
-          .panel-nosotros-container-vision {
+          &-vision {
 
-            .panel-nosotros-container-vision-content {
+            &-content {
               display: block;
 
               h3 {
@@ -304,9 +332,9 @@ main {
             }
           }
 
-          .panel-nosotros-container-historia {
+          &-historia {
 
-            .panel-nosotros-container-historia-content {
+            &-content {
               p {
                 font-size: 2em;
                 color: #252523;
@@ -324,8 +352,8 @@ main {
             }
           }
 
-          .panel-nosotros-container-pilares {
-            .panel-nosotros-container-pilares-content {
+          &-pilares {
+            &-content {
               display: block;
 
               h3 {
@@ -367,10 +395,10 @@ main {
 
       .container {
         transform: rotate(-90deg);
-        width: 83vh;
+        width: 80vh;
         position: absolute;
-        top: 13.5vh;
-        left: -3.5vw;
+        bottom: 10vh;
+        left: -2vw;
 
         @media screen and (max-width: 1370px) {
           top: 6vh;
@@ -383,6 +411,7 @@ main {
           align-items: center;
           padding: 0 2em;
           cursor: pointer;
+          position: relative;
 
           h2 {
             font-family: 'Bebas Neue';
@@ -424,9 +453,9 @@ main {
       .panel-info {
         position: absolute;
         width: 0;
-        height: 83vh;
+        height: 80vh;
         background-color: #fff;
-        top: 0;
+        bottom: 0;
         transition: width 150ms;
         overflow-y: scroll;
 
@@ -443,7 +472,7 @@ main {
           }
 
           h3 {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-bottom: 1em;
           }
         }
@@ -458,11 +487,11 @@ main {
 
           h3 {
             font-weight: bold;
-            font-size: 2em;
+            font-size: 1.5em;
           }
 
           h4 {
-            font-size: 1em;
+            font-size: 1.5em;
             color: var(--superarte-green);
             margin-bottom: 2em;
           }
@@ -473,10 +502,6 @@ main {
             background-color: var(--superarte-green);
             margin-block: .2em;
             display: block;
-          }
-
-          h4 {
-            font-size: 2em;
           }
         }
 
@@ -489,14 +514,14 @@ main {
           }
 
           h3 {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-bottom: 1em;
           }
         }
 
         .panel-info-grabacion {
           h3 {
-            font-size: 2em;
+            font-size: 1.5em;
             display: inline;
           }
 
@@ -516,7 +541,7 @@ main {
 
         .panel-info-ministerial {
           h3 {
-            font-size: 2em;
+            font-size: 1.5em;
             display: inline;
           }
 
@@ -567,6 +592,8 @@ main {
           gap: 0;
 
           >div {
+            display: flex;
+            justify-content: center;
 
             img {
               width: 80%;

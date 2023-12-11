@@ -10,6 +10,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { CampusModule } from './campus/campus.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+const MaterialModules = [MatIconModule];
 
 @NgModule({
   declarations: [
@@ -23,7 +28,10 @@ import { CampusModule } from './campus/campus.module';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CampusModule
+    CampusModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    ...MaterialModules
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
