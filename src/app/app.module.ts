@@ -13,6 +13,7 @@ import { CampusModule } from './campus/campus.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MobileSidebarComponent } from './web/components/mobile-sidebar/mobile-sidebar.component';
 
 const MaterialModules = [MatIconModule];
 
@@ -20,7 +21,8 @@ const MaterialModules = [MatIconModule];
   declarations: [
     AppComponent,
     WebComponent,
-    LoginComponent
+    LoginComponent,
+    MobileSidebarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,11 @@
+<app-mobile-sidebar
+  [isOpen]="isMobileSidebarOpen"
+  (sectionSelected)="toggleSection($event)"
+  (close)="toggleMobileSidebar()"
+></app-mobile-sidebar>
+
 <main>
-  <header>
+  <header class="Header Header--desktop">
     <div class="container">
       <div class="logo" (click)="toggleSection('inicio')">
         <img src="../../assets/superarteLogo.png" alt="Superarte logo">
@@ -13,7 +19,18 @@
     </div>
   </header>
 
-  <section [ngStyle]="{'left': sectionsLeft.inicio}">
+  <header class="Header__mobile">
+    <div class="Header__mobile__container">
+      <div class="Header__mobile__container__logo" (click)="toggleSection('inicio')">
+        <img src="../../assets/superarteLogo.png" alt="Superarte logo">
+      </div>
+      <span class="Header__mobile__container__toggler">
+        <mat-icon (click)="toggleMobileSidebar()">menu</mat-icon>
+      </span>
+    </div>
+  </header>
+
+  <section class="section-inicio" [ngStyle]="{'left': sectionsLeft.inicio}">
     <article class="text">
       <div class="words">
         <span>VIDA</span>
@@ -39,7 +56,7 @@
     </article>
   </section>
 
-  <section [ngStyle]="{'left': sectionsLeft.nosotros}">
+  <section [ngStyle]="{'left': isMobile ? sectionsLeftMobile.nosotros : sectionsLeft.nosotros}">
     <article class="nosotros">
       <div [ngClass]="{'move-right': showNosotrosPanel}">
         <span>NOSOTROS</span>
@@ -63,26 +80,26 @@
     </article>
   </section>
 
-  <section [ngStyle]="{'left': sectionsLeft.formacion}">
+  <section class="section-formacion" [ngStyle]="{'left': isMobile ? sectionsLeftMobile.formacion : sectionsLeft.formacion}">
     <article class="formacion">
       <div class="container">
-        <div #medios (click)="expandSection(this['medios'], 'medios')">
+        <div class="container-medios" *ngIf="!isMobile || (isMobile && (getIsActive('medios') || getNoPanelInfoIsActive()))" #medios (click)="expandSection(this['medios'], 'medios')">
           <h2>MEDIOS</h2>
           <img src="../../assets/right arrow.png" [ngStyle]="mediosData.styles">
         </div>
-        <div #artes (click)="expandSection(this['artes'], 'artes')">
+        <div class="container-artes" *ngIf="!isMobile || (isMobile && (getIsActive('artes') || getNoPanelInfoIsActive()))" #artes (click)="expandSection(this['artes'], 'artes')">
           <h2>ARTES PLÁSTICAS</h2>
           <img src="../../assets/right arrow.png" [ngStyle]="artesData.styles">
         </div>
-        <div #musica (click)="expandSection(this['musica'], 'musica')">
+        <div class="container-musica" *ngIf="!isMobile || (isMobile && (getIsActive('musica') || getNoPanelInfoIsActive()))" #musica (click)="expandSection(this['musica'], 'musica')">
           <h2>MÚSICA</h2>
           <img src="../../assets/right arrow.png" [ngStyle]="musicaData.styles">
         </div>
-        <div #grabacion (click)="expandSection(this['grabacion'], 'grabacion')">
+        <div class="container-grabacion" *ngIf="!isMobile || (isMobile && (getIsActive('grabacion') || getNoPanelInfoIsActive()))" #grabacion (click)="expandSection(this['grabacion'], 'grabacion')">
           <h2>GRABACIÓN</h2>
           <img src="../../assets/right arrow.png" [ngStyle]="grabacionData.styles">
         </div>
-        <div #ministerial (click)="expandSection(this['ministerial'], 'ministerial')">
+        <div class="container-ministerial" *ngIf="!isMobile || (isMobile && (getIsActive('ministerial') || getNoPanelInfoIsActive()))" #ministerial (click)="expandSection(this['ministerial'], 'ministerial')">
           <h2>MINISTERIAL</h2>
           <img src="../../assets/black right arrow.png" [ngStyle]="ministerialData.styles">
         </div>
@@ -91,7 +108,7 @@
     </article>
   </section>
 
-  <section [ngStyle]="{'left': sectionsLeft.staff}">
+  <section [ngStyle]="{'left': isMobile ? sectionsLeftMobile.staff : sectionsLeft.staff}">
     <article class="staff">
       <div class="images">
         <div>
@@ -132,7 +149,7 @@
     </article>
   </section>
 
-  <section [ngStyle]="{'left': sectionsLeft.sedes}">
+  <section [ngStyle]="{'left': isMobile ? sectionsLeftMobile.sedes : sectionsLeft.sedes}">
     <article class="sedes">
       <div class="content">
         <img src="../../assets/right arrow.png">

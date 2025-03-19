@@ -1,0 +1,48 @@
+.Sidebar {
+  & {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--superarte-black);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 10000;
+    transition: left 150ms;
+  }
+
+  &--closed {
+    left: -110vw;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+
+    mat-icon {
+      color: var(--superarte-white);
+      font-size: 60px;
+      height: 60px;
+      width: 60px;
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__item {
+      text-align: center;
+      font-size: 28px;
+      color: var(--superarte-white);
+    }
+  }
+}

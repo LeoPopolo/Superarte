@@ -19,6 +19,8 @@ export class WebComponent {
     transform: 'scale(0.5)'
   };
 
+  isMobile = window.screen.width <= 1024;
+
   showNosotrosPanel: boolean = false;
 
   panelText: string = '';
@@ -69,6 +71,14 @@ export class WebComponent {
     sedes: '-100vw'
   }
 
+  sectionsLeftMobile = {
+    inicio: '0',
+    nosotros: '-160vw',
+    formacion: '-160vw',
+    staff: '-160vw',
+    sedes: '-160vw'
+  }
+
   sectionsColor = {
     nosotros: false,
     formacion: false,
@@ -78,7 +88,13 @@ export class WebComponent {
 
   canToggleSections: boolean = true;
 
+  isMobileSidebarOpen: boolean = false;
+
   constructor() { }
+
+  toggleMobileSidebar() {
+    this.isMobileSidebarOpen = !this.isMobileSidebarOpen;
+  }
 
   toggleSection(section: string) {
 
@@ -95,6 +111,7 @@ export class WebComponent {
 
           setTimeout(()=>{
             this.sectionsLeft.nosotros = '0';
+            this.sectionsLeftMobile.nosotros = '0';
             this.canToggleSections = true;
           }, 500);
 
@@ -107,6 +124,7 @@ export class WebComponent {
 
           setTimeout(()=>{
             this.sectionsLeft.formacion = '0';
+            this.sectionsLeftMobile.formacion = '0';
             this.canToggleSections = true;
           }, 500);
 
@@ -119,6 +137,7 @@ export class WebComponent {
 
           setTimeout(()=>{
             this.sectionsLeft.staff = '0';
+            this.sectionsLeftMobile.staff = '0';
             this.canToggleSections = true;
           }, 500);
 
@@ -131,6 +150,7 @@ export class WebComponent {
 
           setTimeout(()=>{
             this.sectionsLeft.sedes = '0';
+            this.sectionsLeftMobile.sedes = '0';
             this.canToggleSections = true;
           }, 500);
 
@@ -142,6 +162,7 @@ export class WebComponent {
 
           setTimeout(()=>{
             this.sectionsLeft.inicio = '0';
+            this.sectionsLeftMobile.inicio = '0';
             this.canToggleSections = true;
           }, 500);
 
@@ -174,7 +195,7 @@ export class WebComponent {
 
     setTimeout(() => {
 
-      this.getIsActive(section) ? this.panelStyle.width = '0' : this.panelStyle.width = '40vw';
+      this.getIsActive(section) ? this.panelStyle.width = '0' : this.isMobile ? this.panelStyle.width = '95vw' : this.panelStyle.width = '40vw';
       this.transformArrow(section);
       this.setActive(section);
 
@@ -185,12 +206,17 @@ export class WebComponent {
       }, 150);
     }, 150);
 
-    if (window.screen.width <= 1366)
-      this.panelStyle.top = '-4.2vh';
+    if (window.screen.width <= 800)
+      this.panelStyle.top = '13vh';
     else
-      this.panelStyle.top = '-1vh';
+      this.panelStyle.top = '-32px';
 
-    this.panelStyle.left = elementInfo.right + 'px';
+
+    if (window.screen.width <= 800) {
+      this.panelStyle.left = '2.5vw';
+    } else {
+      this.panelStyle.left = elementInfo.right + 'px';
+    }
   }
 
   getIsActive(section: string) {
@@ -214,6 +240,10 @@ export class WebComponent {
         return null;
       }
     }
+  }
+
+  getNoPanelInfoIsActive() {
+    return !this.mediosData.isActive && !this.artesData.isActive && !this.musicaData.isActive && !this.grabacionData.isActive && !this.ministerialData.isActive;
   }
 
   setActive(section: string) {
@@ -339,6 +369,12 @@ export class WebComponent {
     this.sectionsLeft.formacion = '-100vw';
     this.sectionsLeft.staff = '-100vw';
     this.sectionsLeft.sedes = '-100vw';
+
+    this.sectionsLeftMobile.inicio = '-160vw';
+    this.sectionsLeftMobile.nosotros = '-160vw';
+    this.sectionsLeftMobile.formacion = '-160vw';
+    this.sectionsLeftMobile.staff = '-160vw';
+    this.sectionsLeftMobile.sedes = '-160vw';
 
     this.sectionsColor.nosotros = false;
     this.sectionsColor.formacion = false;
@@ -470,6 +506,16 @@ export class WebComponent {
           el cual consta de diferentes materias por cuatrimestre que abarcan diversos temas
           relacionados con Producción, Post-producción, Diseño, Social media, Radio y Fotografía entre otros.
         </h3>
+
+        <div class="download-button-wrapper">
+          <a class="download-button" href="../../assets/planes/medios_cursada.pdf" download>
+            <button>Descargar plan de cursada</button>
+          </a>
+
+          <a class="download-button" href="../../assets/planes/medios_tecnico.pdf" download>
+            <button>Descargar programa técnico</button>
+          </a>
+        </div>
       </div>
     `;
   }
@@ -484,6 +530,12 @@ export class WebComponent {
         <h3>Escultura</h3>
         <span></span>
         <h4>Cada cuatrimestre corresponde a una temática. En el último cuatrimestre de cursada se realiza un proyecto integrador.</h4>
+
+        <div class="download-button-wrapper">
+          <a class="download-button" href="../../assets/planes/artes.pdf" download>
+            <button>Descargar plan de cursada</button>
+          </a>
+        </div>
       </div>
     `;
   }
@@ -501,6 +553,12 @@ export class WebComponent {
         <h3>Los alumnos de canto y batería de 2° nivel, deberán cursar un instrumento armónico.</h3>
         <h2>5.</h2>
         <h3>A partir del 3° cuatrimestre, todos los instrumentos tienen ensamble musical.</h3>
+
+        <div class="download-button-wrapper">
+          <a class="download-button" href="../../assets/planes/musica.pdf" download>
+            <button>Descargar plan de cursada</button>
+          </a>
+        </div>
       </div>
     `;
   }
@@ -516,6 +574,12 @@ export class WebComponent {
           Los alumnos trabajan a través de la plataforma CUBASE para grabar, mezclar, editar y producir audio análogo digital.
           El perfil del curso es Home Studio, es decir, está focalizado a grabar música desde tu casa con herramientas más que accesibles.
         </h3>
+
+        <div class="download-button-wrapper">
+          <a class="download-button" href="../../assets/planes/grabacion.pdf" download>
+            <button>Descargar plan de cursada</button>
+          </a>
+        </div>
       </div>
     `;
   }

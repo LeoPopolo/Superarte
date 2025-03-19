@@ -1,0 +1,9 @@
+<aside class="Sidebar" [class.Sidebar--closed]="!isOpen">
+  <header class="Sidebar__header"><mat-icon (click)="closeSidebar()">close</mat-icon></header>
+  <div class="Sidebar__list">
+    <span class="Sidebar__list__item" (click)="selectSection('nosotros')">Nosotros</span>
+    <span class="Sidebar__list__item" (click)="selectSection('formacion')">Formación</span>
+    <span class="Sidebar__list__item" (click)="selectSection('staff')">Staff</span>
+    <span class="Sidebar__list__item" (click)="selectSection('sedes')">Sedes</span>
+  </div>
+</aside>

@@ -4,8 +4,59 @@ main {
   background-image: url(../../assets/bannerPc.jpg);
   background-size: cover;
 
-  header {
+  .Header {
     padding: 2em 5%;
+
+    &--desktop {
+      @media screen and (max-width: 799px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 800px) {
+        display: flex;
+      }
+    }
+
+    &__mobile {
+      height: 80px;
+      padding-inline: 20px;
+
+      &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 2px solid #fff;
+        padding-block: 20px;
+
+        &__logo {
+          height: 100%;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        &__toggler {
+          height: 100%;
+
+          mat-icon {
+            color: #fff;
+            height: 36px;
+            width: 36px;
+            font-size: 36px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 799px) {
+        display: flex;
+      }
+
+      @media screen and (min-width: 800px) {
+        display: none;
+      }
+    }
 
     .container {
       border-bottom: 2px solid #fff;
@@ -13,6 +64,7 @@ main {
       align-items: center;
       justify-content: space-between;
       padding: 2em 0;
+      width: 100%;
 
       .logo {
         cursor: pointer;
@@ -58,7 +110,7 @@ main {
 
   section {
     width: 100%;
-    height: 100%;
+    height: max-content;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -72,6 +124,22 @@ main {
       @media screen and (max-width: 1370px) {
         font-size: 8em;
       }
+
+      @media screen and (max-width: 799px) {
+        font-size: 5em;
+      }
+    }
+
+    &.section-inicio {
+      @media screen and (max-width: 799px) {
+        flex-direction: column;
+        height: -webkit-fill-available;
+        justify-content: flex-start;
+      }
+    }
+
+    &.section-formacion {
+      height: 97%;
     }
 
     h1 {
@@ -86,16 +154,35 @@ main {
       img {
         width: 10vw;
       }
+
+      @media screen and (max-width: 799px) {
+        bottom: 5vh;
+        width: 15vw;
+        right: 0;
+        left: calc(50% - 7.5vw);
+
+        img {
+          width: 15vw;
+        }
+      }
     }
 
     .text {
       margin-left: 5%;
       margin-top: 2.5%;
 
+      @media screen and (max-width: 799px) {
+        margin: 20% 2.8em;
+      }
+
       .words {
         display: flex;
         flex-direction: column;
         position: relative;
+
+        @media screen and (max-width: 799px) {
+          margin-bottom: 20%;
+        }
 
         span {
           color: #fff;
@@ -111,6 +198,13 @@ main {
           bottom: 4em;
           right: -6em;
           z-index: 5;
+
+          @media screen and (max-width: 1370px) {
+            width: 18vw;
+            height: 18vw;
+            bottom: 3em;
+            right: -2em;
+          }
         }
       }
 
@@ -123,6 +217,11 @@ main {
         border-radius: 100px;
         background-color: var(--superarte-green);
         cursor: pointer;
+
+        @media screen and (max-width: 799px) {
+          font-size: 2em;
+          padding: 0;
+        }
       }
     }
 
@@ -142,6 +241,21 @@ main {
           height: 100%;
         }
       }
+
+      @media screen and (max-width: 799px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+        height: 100px;
+        padding-inline: 12%;
+        gap: 0;
+
+        div {
+          height: 60px;
+        }
+      }
     }
 
     .nosotros {
@@ -159,7 +273,7 @@ main {
         position: absolute;
         height: 80%;
         left: 6%;
-        z-index: 99;
+        z-index: 999;
         transition: left 150ms;
 
         &.move-right {
@@ -174,6 +288,7 @@ main {
         justify-content: space-between;
         align-items: center;
         gap: 3em;
+        z-index: 1100;
 
         @media screen and (max-width: 1370px) {
           gap: 2em;
@@ -233,6 +348,7 @@ main {
         justify-content: center;
         align-items: center;
         transition: all 250ms;
+        z-index: 1300;
 
         &-close {
           position: absolute;
@@ -398,11 +514,17 @@ main {
         width: 80vh;
         position: absolute;
         bottom: 10vh;
-        left: -2vw;
+        left: -2.5vw;
+        top: 90px;
 
         @media screen and (max-width: 1370px) {
-          top: 6vh;
-          left: -0.8vw;
+          top: 68px;
+        }
+
+        @media screen and (max-width: 799px) {
+          top: 5vh;
+          transform: none;
+          width: 97%;
         }
 
         >div {
@@ -417,37 +539,46 @@ main {
             font-family: 'Bebas Neue';
             font-size: 5em;
             color: #fff;
+
+            @media screen and (max-width: 799px) {
+              font-size: 2.2em;
+            }
           }
 
           img {
             height: 5em;
             transition: transform 150ms;
-          }
 
-          &:nth-child(1) {
-            background-color: var(--superarte-yellow);
-          }
-
-          &:nth-child(2) {
-            background-color: var(--superarte-green);
-          }
-
-          &:nth-child(3) {
-            background-color: var(--superarte-violet);
-          }
-
-          &:nth-child(4) {
-            background-color: var(--superarte-light-blue);
-          }
-
-          &:nth-child(5) {
-            background-color: #fff;
-
-            h2 {
-              color: #252523;
+            @media screen and (max-width: 799px) {
+              height: 2.2em;
             }
           }
         }
+
+        &-medios {
+          background-color: var(--superarte-yellow);
+        }
+
+        &-artes {
+          background-color: var(--superarte-green);
+        }
+
+        &-musica {
+          background-color: var(--superarte-violet);
+        }
+
+        &-grabacion {
+          background-color: var(--superarte-light-blue);
+        }
+
+        &-ministerial {
+          background-color: #fff;
+
+          h2 {
+            color: #252523 !important;
+          }
+        }
+
       }
 
       .panel-info {
@@ -458,6 +589,10 @@ main {
         bottom: 0;
         transition: width 150ms;
         overflow-y: scroll;
+
+        @media screen and (max-width: 799px) {
+          height: 72vh;
+        }
 
         >div {
           padding: 2em;
@@ -474,6 +609,20 @@ main {
           h3 {
             font-size: 1.5em;
             margin-bottom: 1em;
+          }
+
+          .download-button {
+            background-color: var(--superarte-yellow);
+          }
+
+          @media screen and (max-width: 799px) {
+            h2 {
+              font-size: 48px;
+            }
+
+            h3 {
+              font-size: 20px;
+            }
           }
         }
 
@@ -503,6 +652,20 @@ main {
             margin-block: .2em;
             display: block;
           }
+
+          .download-button {
+            background-color: var(--superarte-green);
+          }
+
+          @media screen and (max-width: 799px) {
+            h2 {
+              font-size: 48px;
+            }
+
+            h3 {
+              font-size: 20px;
+            }
+          }
         }
 
         .panel-info-musica {
@@ -516,6 +679,20 @@ main {
           h3 {
             font-size: 1.5em;
             margin-bottom: 1em;
+          }
+
+          .download-button {
+            background-color: var(--superarte-violet);
+          }
+
+          @media screen and (max-width: 799px) {
+            h2 {
+              font-size: 48px;
+            }
+
+            h3 {
+              font-size: 20px;
+            }
           }
         }
 
@@ -537,6 +714,21 @@ main {
             display: inline;
             font-size: 4em;
           }
+
+          .download-button {
+            background-color: var(--superarte-light-blue);
+            margin-top: 1em;
+          }
+
+          @media screen and (max-width: 799px) {
+            h2 {
+              font-size: 48px;
+            }
+
+            h3 {
+              font-size: 20px;
+            }
+          }
         }
 
         .panel-info-ministerial {
@@ -556,6 +748,16 @@ main {
             color: #252523;
             display: inline;
             font-size: 4em;
+          }
+
+          @media screen and (max-width: 799px) {
+            h2 {
+              font-size: 48px;
+            }
+
+            h3 {
+              font-size: 20px;
+            }
           }
         }
 
@@ -715,4 +917,22 @@ main {
       }
     }
   }
+}
+
+.download-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  padding: 14px 28px;
+  color: #fff;
+  background-color: #252525;
+  width: auto;
+  display: inline-flex;
 }
