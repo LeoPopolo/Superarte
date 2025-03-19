@@ -1,6 +1,6 @@
 <section class="New">
   <header class="New__header">
-    <h1 class="New__header__title">Nuevo usuario</h1>
+    <h1 class="New__header__title">{{formTitle}}</h1>
     <mat-icon (click)="closeDialog()">close</mat-icon>
   </header>
   <section class="New__body">
@@ -57,6 +57,7 @@
   </section>
 
   <footer class="New__footer">
-    <button class="Button" (click)="createUser()">Aceptar</button>
+    <button class="Button" *ngIf="!edit" (click)="createUser()">Aceptar</button>
+    <button class="Button" *ngIf="edit" (click)="editUser()">Aceptar</button>
   </footer>
 </section>

@@ -30,7 +30,7 @@
               <mat-icon class="Table__body__item__col--actions" [matMenuTriggerFor]="actionsMenu">more_vert</mat-icon>
 
               <mat-menu #actionsMenu="matMenu">
-                <span mat-menu-item> <mat-icon>edit</mat-icon> Editar</span>
+                <span mat-menu-item (click)="openDialogEditUser(item.id)"> <mat-icon>edit</mat-icon> Editar</span>
                 <span mat-menu-item> <mat-icon>delete</mat-icon> Eliminar</span>
                 <span mat-menu-item (click)="openDialogCreateInscription(item.id)"> <mat-icon>post_add</mat-icon> Asignar materia</span>
               </mat-menu>

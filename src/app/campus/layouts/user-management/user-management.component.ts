@@ -34,7 +34,10 @@ export class UserManagementComponent implements OnInit {
   openDialogCreateUser() {
     const dialog = this.dialog.open(DialogCreateEditUserComponent, {
       width: '500px',
-      disableClose: true
+      disableClose: true,
+      data: {
+        edit: false
+      }
     });
 
     dialog.afterClosed().subscribe(data => {
@@ -43,6 +46,26 @@ export class UserManagementComponent implements OnInit {
         this.openSnackbar('Usuario creado con éxito');
       } else if (data.action && !data.data) {
         this.openSnackbar('No se pudo crear el usuario');
+      }
+    });
+  }
+
+  openDialogEditUser(userId: number) {
+    const dialog = this.dialog.open(DialogCreateEditUserComponent, {
+      width: '500px',
+      disableClose: true,
+      data: {
+        edit: true,
+        userId
+      }
+    });
+
+    dialog.afterClosed().subscribe(data => {
+      if (data.action && data.data) {
+        this.getUsers();
+        this.openSnackbar('Usuario modificado con éxito');
+      } else if (data.action && !data.data) {
+        this.openSnackbar('No se pudo modificar el usuario');
       }
     });
   }

@@ -22,22 +22,18 @@
       margin-top: 20px;
       display: flex;
 
-      &__form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        &__control {
+      &__data {
+        &__item {
           display: flex;
           flex-direction: column;
-          gap: 5px;
+          margin-top: 1em;
 
           &__label {
-            color: var(--superarte-white);
+            color: var(--superarte-light-blue);
           }
 
-          &__input {
-            width: 250px;
+          &__value {
+            color: var(--superarte-white);
           }
         }
       }

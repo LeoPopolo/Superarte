@@ -4,24 +4,36 @@
       <h1 class="Profile__header__title">Mi perfil</h1>
     </header>
     <section class="Profile__body">
-      <form class="Profile__body__form" [formGroup]="form">
-        <div class="Profile__body__form__control">
-          <label class="Profile__body__form__control__label">Nombre</label>
-          <input type="text" class="Profile__body__form__control__input Input" formControlName="name">
+      <section class="Profile__body__data">
+        <div class="Profile__body__data__item">
+          <label class="Profile__body__data__item__label">Nombre</label>
+          <span class="Profile__body__data__item__value">{{user.name}}</span>
         </div>
-        <div class="Profile__body__form__control">
-          <label class="Profile__body__form__control__label">Apellido</label>
-          <input type="text" class="Profile__body__form__control__input Input" formControlName="last_name">
+        <div class="Profile__body__data__item">
+          <label class="Profile__body__data__item__label">Apellido</label>
+          <span class="Profile__body__data__item__value">{{user.last_name}}</span>
         </div>
-        <div class="Profile__body__form__control">
-          <label class="Profile__body__form__control__label">DNI</label>
-          <input type="text" class="Profile__body__form__control__input Input" formControlName="username">
+        <div class="Profile__body__data__item">
+          <label class="Profile__body__data__item__label">DNI</label>
+          <span class="Profile__body__data__item__value">{{user.username}}</span>
         </div>
-        <div class="Profile__body__form__control">
-          <label class="Profile__body__form__control__label">Fecha de nacimiento</label>
-          <input type="date" class="Profile__body__form__control__input Input" formControlName="birthdate">
+        <div class="Profile__body__data__item">
+          <label class="Profile__body__data__item__label">Fecha de nacimiento</label>
+          <span class="Profile__body__data__item__value">{{user.birthdate | date: 'dd-MM-yyyy'}}</span>
         </div>
-      </form>
+        <div class="Profile__body__data__item">
+          <label class="Profile__body__data__item__label">Teléfono</label>
+          <span class="Profile__body__data__item__value">{{user.contact_information.phone_number || '--'}}</span>
+        </div>
+        <div class="Profile__body__data__item">
+          <label class="Profile__body__data__item__label">Dirección</label>
+          <span class="Profile__body__data__item__value">{{user.contact_information.address || '--'}}</span>
+        </div>
+        <div class="Profile__body__data__item">
+          <label class="Profile__body__data__item__label">Email</label>
+          <span class="Profile__body__data__item__value">{{user.contact_information.email || '--'}}</span>
+        </div>
+      </section>
       <div class="Profile__body__changePassword">
         <span class="Profile__body__changePassword__button">Cambiar contraseña</span>
       </div>

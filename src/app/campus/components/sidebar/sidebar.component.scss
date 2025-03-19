@@ -3,6 +3,19 @@
   width: 300px;
   background-color: var(--superarte-black);
 
+  &__logo {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 1em;
+    padding-top: 1em;
+
+    img {
+      height: 100%;
+    }
+  }
+
   &__content {
     height: max-content;
     display: flex;

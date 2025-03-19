@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { UserService } from '../../services/user.service';
 import { UserRequest, UserType } from '../../models/user';
 
@@ -13,11 +13,15 @@ export class DialogCreateEditUserComponent implements OnInit {
 
   form!: FormGroup;
 
+  edit!: boolean;
+
   constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<DialogCreateEditUserComponent>,
     private userServices: UserService
   ) {
+    this.edit = data.edit;
     this.createForm();
   }
 
@@ -57,6 +61,10 @@ export class DialogCreateEditUserComponent implements OnInit {
     );
   }
 
+  editUser() {
+
+  }
+
   getFormValue(control: string) {
     return this.form.get(control)?.value;
   }
@@ -67,6 +75,10 @@ export class DialogCreateEditUserComponent implements OnInit {
 
   hasError(control: string, error: string) {
     return this.form.get(control)?.hasError(error) && this.form.get(control)?.touched;
+  }
+
+  get formTitle() {
+    return this.edit ? 'Editar usuario' : 'Nuevo usuario';
   }
 
   createForm() {

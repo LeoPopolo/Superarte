@@ -1,4 +1,8 @@
 <aside class="Sidebar">
+  <div class="Sidebar__logo">
+    <img src="../../../../assets/superarteLogo.png">
+  </div>
+
   <section class="Sidebar__content">
     <div class="Sidebar__content__item" *ngFor="let item of items" [routerLink]="item.path">
       <mat-icon class="Sidebar__content__item__icon">{{item.icon}}</mat-icon>
