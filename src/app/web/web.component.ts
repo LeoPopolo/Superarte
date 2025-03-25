@@ -431,6 +431,10 @@ export class WebComponent {
     }
   }
 
+  gotoIdpPage() {
+    window.location.href = 'https://iglesiadelpuente.com/';
+  }
+
   setMisionText() {
     this.nosotrosText = `
       <div class="panel-nosotros-container-mision">
@@ -614,7 +618,7 @@ export class WebComponent {
 
     switch(section) {
       case 'wp': {
-        window.open('https://api.whatsapp.com/send?phone=5491122728456');
+        window.open('https://api.whatsapp.com/send?phone=5491121801491');
       }
       break;
       case 'fb': {

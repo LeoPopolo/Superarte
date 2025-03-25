@@ -40,7 +40,7 @@
         <div class="yellow-circle"></div>
       </div>
       <div class="btn-login">
-        <button routerLink="/login">ACCEDER</button>
+        <button *ngIf="false" routerLink="/login">ACCEDER</button>
       </div>
     </article>
     <article class="social">
@@ -52,11 +52,11 @@
     </article>
 
     <article class="idp-logo">
-      <img src="../../assets/Logo idp.png">
+      <img (click)="gotoIdpPage()" src="../../assets/Logo idp.png">
     </article>
   </section>
 
-  <section [ngStyle]="{'left': isMobile ? sectionsLeftMobile.nosotros : sectionsLeft.nosotros}">
+  <section class="section-nosotros" [ngStyle]="{'left': isMobile ? sectionsLeftMobile.nosotros : sectionsLeft.nosotros}">
     <article class="nosotros">
       <div [ngClass]="{'move-right': showNosotrosPanel}">
         <span>NOSOTROS</span>
@@ -88,7 +88,7 @@
           <img src="../../assets/right arrow.png" [ngStyle]="mediosData.styles">
         </div>
         <div class="container-artes" *ngIf="!isMobile || (isMobile && (getIsActive('artes') || getNoPanelInfoIsActive()))" #artes (click)="expandSection(this['artes'], 'artes')">
-          <h2>ARTES PLÁSTICAS</h2>
+          <h2>ARTES VISUALES</h2>
           <img src="../../assets/right arrow.png" [ngStyle]="artesData.styles">
         </div>
         <div class="container-musica" *ngIf="!isMobile || (isMobile && (getIsActive('musica') || getNoPanelInfoIsActive()))" #musica (click)="expandSection(this['musica'], 'musica')">
@@ -149,25 +149,20 @@
     </article>
   </section>
 
-  <section [ngStyle]="{'left': isMobile ? sectionsLeftMobile.sedes : sectionsLeft.sedes}">
+  <section class="section-sedes" [ngStyle]="{'left': isMobile ? sectionsLeftMobile.sedes : sectionsLeft.sedes}">
     <article class="sedes">
       <div class="content">
-        <img src="../../assets/right arrow.png">
-        <h2>BERISO</h2>
-        <span class="blue-line blue-line-1"></span>
-        <div>
-          <p>E-Mail: Institutosuperartebsso@gmail.com</p>
-          <p>Dirección: Av. Génova 3143, 1923 Berisso</p>
-          <p>Teléfono: 11 4224-7372</p>
+        <div class="content__title">
+          <img src="../../assets/right arrow.png">
+          <h2>Quilmes</h2>
+          <span class="blue-line blue-line-1"></span>
         </div>
-      </div>
-
-      <div class="content">
-        <img src="../../assets/right arrow.png">
-        <h2>PRINGLES</h2>
-        <span class="blue-line blue-line-2"></span>
-        <div>
-          <p>E-Mail: superartepringles@gmail.com</p>
+        <div class="content__info">
+          <div>
+            <p>E-Mail: institutosuperarte@gmail.com</p>
+            <p>Dirección: Garibaldi 5</p>
+            <p>Teléfono: 11 2180-1491</p>
+          </div>
         </div>
       </div>
     </article>
