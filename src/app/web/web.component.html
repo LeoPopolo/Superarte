@@ -11,6 +11,7 @@
         <img src="../../assets/superarteLogo.png" alt="Superarte logo">
       </div>
       <div class="sections">
+        <span (click)="toggleSection('inicio')" [ngClass]="{'active-light-blue': sectionsColor.inicio}">Inicio</span>
         <span (click)="toggleSection('nosotros')" [ngClass]="{'active-green': sectionsColor.nosotros}">Nosotros</span>
         <span (click)="toggleSection('formacion')" [ngClass]="{'active-violet': sectionsColor.formacion}">Formación</span>
         <span (click)="toggleSection('staff')" [ngClass]="{'active-yellow': sectionsColor.staff}">Staff</span>
@@ -113,11 +114,11 @@
       <div class="images">
         <div>
           <div>
-            <img src="../../assets/pastores.png" alt="Pastores Pedro y Gertrudis Ibarra">
+            <img src="../../assets/pastor pedro.jpeg" alt="Pastor Pedro">
           </div>
           <div class="names">
-            <span class="title">PASTORES:</span>
-            <span>PEDRO Y GERTRUDIS IBARRA</span>
+            <span class="title">PASTOR PRINCIPAL:</span>
+            <span class="name">PEDRO IBARRA</span>
           </div>
         </div>
         <div>
@@ -126,23 +127,19 @@
           </div>
           <div class="names">
             <span class="title">DIRECTOR:</span>
-            <span>ALFREDO PRIETO</span>
+            <span class="name">ALFREDO PRIETO</span>
           </div>
         </div>
       </div>
       <div class="info">
         <div class="info-yellow-circle">
           <div>
-            <b>Coordinador general</b>
-            <span>Maximiliano Martinez</span>
+            <b>Coordinación general</b>
+            <span>Maximiliano y Agustina Martinez</span>
           </div>
           <div>
             <b>Responsable de profesores de música</b>
             <span>Paula Bof</span>
-          </div>
-          <div>
-            <b>Responsable administrativa</b>
-            <span>Agustina Rondinoni</span>
           </div>
         </div>
       </div>
@@ -159,7 +156,7 @@
         </div>
         <div class="content__info">
           <div>
-            <p>E-Mail: institutosuperarte@gmail.com</p>
+            <p>E-Mail: institutosuperarte1@gmail.com</p>
             <p>Dirección: Garibaldi 5</p>
             <p>Teléfono: 11 2180-1491</p>
           </div>

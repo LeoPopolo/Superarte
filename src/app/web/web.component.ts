@@ -80,6 +80,7 @@ export class WebComponent {
   }
 
   sectionsColor = {
+    inicio: true,
     nosotros: false,
     formacion: false,
     staff: false,
@@ -159,6 +160,7 @@ export class WebComponent {
 
         default: {
           this.restartSections();
+          this.sectionsColor.inicio = true;
 
           setTimeout(()=>{
             this.sectionsLeft.inicio = '0';
@@ -376,6 +378,7 @@ export class WebComponent {
     this.sectionsLeftMobile.staff = '-160vw';
     this.sectionsLeftMobile.sedes = '-160vw';
 
+    this.sectionsColor.inicio = false;
     this.sectionsColor.nosotros = false;
     this.sectionsColor.formacion = false;
     this.sectionsColor.staff = false;
@@ -498,17 +501,14 @@ export class WebComponent {
       <div class="panel-info-medios">
         <h2>1.</h2>
         <h3>
-          Para potenciar tu formación técnica, estamos asociados con ORU (Oral Roberts University)
-          y con Gospel Media cuyo director es Pablo Muñíz. ORU es una importante universidad de los Estados Unidos
-          con una vasta trayectoria en la formación profesional de distintas disciplinas.
-          En tu cursada, vas a disponer de un cuerpo docente liderado por Pablo y vas a tener acceso a la
-          plataforma virtual de ORU para poder ver distintos cursos de Medios como parte del programa.
+          Para potenciar tu formación técnica, estamos asociados con LCA (Luz, Cámara, Acción).
+          En tu cursada, vas a disponer de un cuerpo docente especializado y vas a tener acceso a distintos cursos específicos de Medios como parte del programa.
         </h3>
         <h2>2.</h2>
         <h3>
           Hay un programa técnico de 2 años diseñado especialmente para el instituto
           el cual consta de diferentes materias por cuatrimestre que abarcan diversos temas
-          relacionados con Producción, Post-producción, Diseño, Social media, Radio y Fotografía entre otros.
+          relacionados con Producción, Post-producción, Transmisión en vivo y Fotografía, Operación de Cámara entre otros.
         </h3>
 
         <div class="download-button-wrapper">
@@ -550,7 +550,7 @@ export class WebComponent {
         <h2>1.</h2>
         <h3>La formación base del Instituto consta de 4 niveles cuatrimestrales.</h3>
         <h2>2.</h2>
-        <h3>Los instrumentos que se enseñan en el instituto son: Bajo, Bateria, Guitarra, Piano, Violin y Canto.</h3>
+        <h3>Los instrumentos que se enseñan en el instituto son: Bajo, Bateria, Guitarra, Teclado, Violin y Canto.</h3>
         <h2>3.</h2>
         <h3>Todos los instrumentos tienen en común la materia Teoria musical.</h3>
         <h2>4.</h2>
@@ -592,8 +592,7 @@ export class WebComponent {
     this.panelText = `
       <div class="panel-info-ministerial">
         <h3>
-          La Formación ministerial se divide en 4 bloques.
-          El bloque contiene 2 materias y dura 1 cuatrimestre.
+          La Formación Ministerial se divide en 4 cuatrimestres. Las materias a cursar son la siguientes:
         </h3>
 
         <h2>CUATRIMESTRE 1</h2>
@@ -606,10 +605,8 @@ export class WebComponent {
           <span>.</span> <h3>Carácter cristiano</h3>
         <h2>CUATRIMESTRE 3</h2>
           <span>.</span> <h3>Materia IBE 1 (rotativa)</h3>
-          </br>
-          <span>.</span> <h3>Materia IBE 2 (rotativa)</h3>
         <h2>CUATRIMESTRE 4</h2>
-          <span>.</span> <h3>Materia IBE 3 (rotativa)</h3>
+          <span>.</span> <h3>Materia IBE 2 (rotativa)</h3>
       </div>
     `;
   }

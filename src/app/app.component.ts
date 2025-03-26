@@ -19,7 +19,7 @@ export class AppComponent {
       { 'http-equiv': 'content-language', content: 'es' },
       { property: 'og:title', content: 'Instituto Superarte' },
       { property: 'og:description', content: 'Formando adoradores' },
-      { property: 'og:image', content: '../assets/superarteLogo.png' },
+      { property: 'og:image', content: '../assets/superarteLogoBlack.jpeg' },
       { property: 'og:url', content: 'https://institutosuperarte.com.ar' }
     ]);
   }

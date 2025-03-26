@@ -89,19 +89,19 @@ main {
           cursor: pointer;
         }
 
-        :nth-child(1):hover, span.active-green {
+        :nth-child(2):hover, span.active-green {
           color: var(--superarte-green);
         }
 
-        :nth-child(2):hover, span.active-violet {
+        :nth-child(3):hover, span.active-violet {
           color: var(--superarte-violet);
         }
 
-        :nth-child(3):hover, span.active-yellow {
+        :nth-child(4):hover, span.active-yellow {
           color: var(--superarte-yellow);
         }
 
-        :nth-child(4):hover, span.active-light-blue {
+        :nth-child(5):hover, span.active-light-blue, :nth-child(1):hover {
           color: var(--superarte-light-blue);
         }
       }
@@ -122,7 +122,7 @@ main {
       font-size: 10em;
 
       @media screen and (max-width: 1370px) {
-        font-size: 8em;
+        font-size: 6em;
       }
 
       @media screen and (max-width: 799px) {
@@ -171,10 +171,10 @@ main {
         bottom: 5vh;
         width: 15vw;
         right: 0;
-        left: calc(50% - 7.5vw);
+        left: calc(50% - 10vw);
 
         img {
-          width: 15vw;
+          width: 20vw;
         }
       }
     }
@@ -288,6 +288,10 @@ main {
       place-items: center;
       position: relative;
       padding: 2em 0;
+
+      @media screen and (max-width: 1370px) {
+        height: 85%;
+      }
 
       @media screen and (max-width: 799px) {
         flex-direction: column;
@@ -536,15 +540,16 @@ main {
             &-content {
               @media screen and (max-width: 799px) {
                 margin-top: 10px;
-                height: 290px;
+                height: 330px;
                 overflow-y: auto;
               }
 
               p {
                 font-size: 1.5em;
                 color: #252523;
-                text-align: center;
+                text-align: justify;
                 margin-top: 2em;
+                width: 75%;
 
                 @media screen and (max-width: 1370px) {
                   font-size: 1.3em;
@@ -552,6 +557,7 @@ main {
 
                 @media screen and (max-width: 799px) {
                   font-size: 18px;
+                  width: 90%;
                 }
               }
             }
@@ -655,6 +661,10 @@ main {
             font-family: 'Bebas Neue';
             font-size: 5em;
             color: #fff;
+
+            @media screen and (max-width: 1370px) {
+              font-size: 4em;
+            }
 
             @media screen and (max-width: 799px) {
               font-size: 2.2em;
@@ -913,6 +923,10 @@ main {
 
       .images {
 
+        @media screen and (max-width: 799px) {
+          width: 100%;
+        }
+
         >:nth-child(2) {
           margin-top: 5%;
         }
@@ -920,6 +934,7 @@ main {
         > div {
           display: flex;
           gap: 0;
+          padding-block: 25px;
 
           @media screen and (max-width: 799px) {
             flex-direction: row;
@@ -941,6 +956,7 @@ main {
 
             img {
               width: 60%;
+              border-radius: 100%;
 
               @media screen and (max-width: 1370px) {
                 width: 50%;
@@ -961,14 +977,18 @@ main {
             }
 
             .title {
-              font-size: 6em;
-
-              @media screen and (max-width: 1370px) {
-                font-size: 5em;
-              }
+              font-size: 3em;
 
               @media screen and (max-width: 799px) {
-                font-size: 20px;
+                font-size: 28px;
+              }
+            }
+
+            .name {
+              font-size: 2.5em;
+
+              @media screen and (max-width: 799px) {
+                font-size: 24px;
               }
             }
           }
@@ -981,6 +1001,10 @@ main {
             span {
               text-align: end;
               width: 100%;
+
+              @media screen and (max-width: 799px) {
+                text-align: left;
+              }
             }
           }
         }
@@ -988,8 +1012,8 @@ main {
 
       .info {
         .info-yellow-circle {
-          width: 35vw;
-          height: 35vw;
+          width: 30vw;
+          height: 30vw;
           background-color: var(--superarte-yellow);
           border-radius: 50%;
           display: flex;
@@ -1010,12 +1034,12 @@ main {
             align-items: center;
 
             b, span {
-              font-size: 2em;
+              font-size: 1.5em;
               font-family: 'bahnschrift';
               color: #252523;
 
               @media screen and (max-width: 1370px) {
-                font-size: 1.5em;
+                font-size: 1.2em;
               }
 
               @media screen and (max-width: 799px) {
@@ -1112,7 +1136,7 @@ main {
               color: #252523;
 
               @media screen and (max-width: 1370px) {
-                font-size: 1.5em;
+                font-size: 1em;
               }
 
               @media screen and (max-width: 799px) {
