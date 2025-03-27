@@ -653,7 +653,7 @@ main {
                 color: #252523;
                 margin-top: 1em;
 
-                @media screen and (max-width: 799px) {
+                @media screen and (min-width: 800px) {
                   text-align: center;
                 }
 
