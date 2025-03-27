@@ -122,7 +122,7 @@ main {
       font-size: 10em;
 
       @media screen and (max-width: 1370px) {
-        font-size: 6em;
+        font-size: 8em;
       }
 
       @media screen and (max-width: 799px) {
@@ -590,6 +590,10 @@ main {
                 margin-top: 1em;
                 font-size: 34px !important;
 
+                @media screen and (max-width: 1370px) {
+                  font-size: 20px !important;
+                }
+
                 @media screen and (max-width: 799px) {
                   font-size: 24px !important;
                 }
@@ -609,6 +613,10 @@ main {
                 color: #252523;
                 text-align: center;
                 margin-top: 1em;
+
+                @media screen and (max-width: 1370px) {
+                  font-size: 16px !important;
+                }
               }
             }
 
@@ -727,7 +735,7 @@ main {
         .panel-info-medios {
           h2 {
             color: var(--superarte-yellow);
-            font-size: 4em;
+            font-size: 3.5em;
             margin-bottom: .2em;
             font-family: 'Bebas Neue';
           }
@@ -754,21 +762,21 @@ main {
 
         .panel-info-artes {
           h2 {
-            font-family: 'Bebas Neue';
-            font-size: 2.5em;
             color: var(--superarte-green);
-            margin-bottom: .5em;
+            font-size: 3.5em;
+            margin-bottom: .2em;
+            font-family: 'Bebas Neue';
           }
 
           h3 {
-            font-weight: bold;
             font-size: 1.5em;
+            margin-bottom: 1em;
           }
 
           h4 {
             font-size: 1.5em;
             color: var(--superarte-green);
-            margin-bottom: 2em;
+            font-weight: bold;
           }
 
           span {
@@ -797,7 +805,7 @@ main {
         .panel-info-musica {
           h2 {
             color: var(--superarte-violet);
-            font-size: 4em;
+            font-size: 3.5em;
             margin-bottom: .2em;
             font-family: 'Bebas Neue';
           }
@@ -830,8 +838,8 @@ main {
 
           h2 {
             color: var(--superarte-light-blue);
-            font-size: 3em;
-            margin-block: .5em;
+            font-size: 3.5em;
+            margin-bottom: .2em;
             font-family: 'Bebas Neue';
           }
 

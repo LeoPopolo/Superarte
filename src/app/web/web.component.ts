@@ -454,7 +454,7 @@ export class WebComponent {
         <div class="panel-nosotros-container-vision-content">
           <h3 class="subtitle">Brindar los fundamentos bíblicos y técnicos sobre los cuales el alumno pueda:</h3>
           </br>
-          <h3><span>.</span>Desarrollar una vida de adoración integral e intimidad con Dios</h3>
+          <h3><span>.</span>Desarrollar una vida de adoración integral e íntima con Dios</h3>
           <h3><span>.</span>Levantar el nombre de Jesús a través de las diferentes expresiones artísticas.</h3>
         </div>
       </div>
@@ -527,13 +527,15 @@ export class WebComponent {
   setArtesText() {
     this.panelText = `
       <div class="panel-info-artes">
-        <h2>TÉMATICAS PRINCIPALES:</h2>
-        <h4>La formación base del Instituto consta de 4 niveles cuatrimestrales.</h4>
-        <h3>Grabado</h3>
-        <h3>Pintura</h3>
-        <h3>Escultura</h3>
+        <h2>1.</h2>
+        <h3>La formación base del Instituto consta de 4 niveles cuatrimestrales.</h3>
+        <h2>2.</h2>
+        <h3>Cada cuatrimestre corresponde a una temática. En el último cuatrimestre de cursada se realiza un proyecto integrador.</h3>
+
+        <h4>Grabado</h4>
+        <h4>Pintura</h4>
+        <h4>Escultura</h4>
         <span></span>
-        <h4>Cada cuatrimestre corresponde a una temática. En el último cuatrimestre de cursada se realiza un proyecto integrador.</h4>
 
         <div class="download-button-wrapper">
           <a class="download-button" href="../../assets/planes/artes.pdf" download>
@@ -554,9 +556,9 @@ export class WebComponent {
         <h2>3.</h2>
         <h3>Todos los instrumentos tienen en común la materia Teoria musical.</h3>
         <h2>4.</h2>
-        <h3>Los alumnos de canto y batería de 2° nivel, deberán cursar un instrumento armónico.</h3>
+        <h3>Los alumnos de canto, batería y violín de nivel 2 deberán cursar un instrumento armónico por un único cuatrimestre.</h3>
         <h2>5.</h2>
-        <h3>A partir del 3° cuatrimestre, todos los instrumentos tienen ensamble musical.</h3>
+        <h3>A partir del 4° cuatrimestre, todos los instrumentos tienen ensamble musical.</h3>
 
         <div class="download-button-wrapper">
           <a class="download-button" href="../../assets/planes/musica.pdf" download>
@@ -570,10 +572,9 @@ export class WebComponent {
   setGrabacionText() {
     this.panelText = `
       <div class="panel-info-grabacion">
-        <h2>GRABACIÓN DE AUDIO PRO</h2>
-        <span>.</span> <h3>La formación base del Instituto consta de 4 niveles cuatrimestrales.</h3>
-          </br>
-        <span>.</span>
+        <h2>1.</h2>
+        <h3>La formación base del Instituto consta de 4 niveles cuatrimestrales.</h3>
+        <h2>2.</h2>
         <h3>
           Los alumnos trabajan a través de la plataforma CUBASE para grabar, mezclar, editar y producir audio análogo digital.
           El perfil del curso es Home Studio, es decir, está focalizado a grabar música desde tu casa con herramientas más que accesibles.
