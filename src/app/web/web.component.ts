@@ -14,7 +14,7 @@ export class WebComponent {
   @ViewChild('grabacion') grabacion: ElementRef = new ElementRef(null);
   @ViewChild('ministerial') ministerial: ElementRef = new ElementRef(null);
 
-  nosotrosPanelStyles = {
+  nosotrosPanelStyles: any = {
     opacity: '0',
     transform: 'scale(0.5)'
   };
@@ -22,6 +22,7 @@ export class WebComponent {
   isMobile = window.screen.width <= 1024;
 
   showNosotrosPanel: boolean = false;
+  panelNosotrosSelected: string = '';
 
   panelText: string = '';
   nosotrosText: string = '';
@@ -343,6 +344,7 @@ export class WebComponent {
   }
 
   togglePanel(item: string) {
+    this.panelNosotrosSelected = item;
 
     if (this.nosotrosPanelStyles.opacity === '0') {
       this.showNosotrosPanel = true;

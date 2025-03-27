@@ -72,7 +72,7 @@
         <span class="yellow-circle"></span>
         <span class="violet-outlined-circle"></span>
       </div>
-      <div class="panel-nosotros" [ngStyle]="nosotrosPanelStyles" *ngIf="showNosotrosPanel">
+      <div class="panel-nosotros" [class.panel-nosotros--mision]="panelNosotrosSelected === 'mision'" [ngStyle]="nosotrosPanelStyles" *ngIf="showNosotrosPanel">
         <span class="panel-nosotros-close" (click)="togglePanel('')"><mat-icon>close</mat-icon></span>
         <div class="panel-nosotros-container" [innerHTML]="nosotrosText">
 

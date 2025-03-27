@@ -413,6 +413,22 @@ main {
         transition: all 250ms;
         z-index: 1300;
 
+        &--mision {
+          @media screen and (min-width: 800px) {
+            width: 50%;
+            height: 50vh;
+            top: 12%;
+            left: 25%;
+          }
+
+          @media screen and (min-width: 1371px) {
+            width: 50%;
+            height: 60vh;
+            top: 3%;
+            left: 25%;
+          }
+        }
+
         @media screen and (max-width: 799px) {
           height: 55vh;
           top: 16vh;
@@ -470,10 +486,13 @@ main {
               h3 {
                 font-size: 2.5em;
                 color: #252523;
-                text-align: center;
 
                 @media screen and (max-width: 1370px) {
-                 font-size: 1.5em;
+                  font-size: 1.5em;
+                }
+
+                @media screen and (max-width: 799px) {
+                  text-align: justify;
                 }
               }
             }
@@ -484,6 +503,10 @@ main {
             &-content {
               height: 80%;
               padding-top: 5%;
+
+              h3 {
+                margin-top: 2em;
+              }
             }
 
             h2 {
@@ -497,6 +520,10 @@ main {
               display: block;
               display: flex;
               flex-direction: column;
+
+              @media screen and (min-width: 800px) {
+                padding-inline: 130px;
+              }
 
               h3 {
                 font-size: 2em !important;
@@ -518,6 +545,11 @@ main {
               .subtitle {
                 font-size: 2.5em;
                 margin-top: 1em;
+                text-align: left;
+
+                @media screen and (min-width: 799px) {
+                  padding-left: 10px;
+                }
 
                 @media screen and (max-width: 1370px) {
                   font-size: 2em;
@@ -535,12 +567,12 @@ main {
           }
 
           &-historia {
-            height: 50%;
+            padding-bottom: 2em;
 
             &-content {
               @media screen and (max-width: 799px) {
-                margin-top: 10px;
-                height: 330px;
+                margin-top: 20px;
+                height: -webkit-fill-available;;
                 overflow-y: auto;
               }
 
@@ -551,13 +583,13 @@ main {
                 margin-top: 2em;
                 width: 75%;
 
-                @media screen and (max-width: 1370px) {
-                  font-size: 1.3em;
-                }
-
                 @media screen and (max-width: 799px) {
                   font-size: 18px;
                   width: 90%;
+                }
+
+                @media screen and (max-width: 1370px) {
+                  font-size: 1.3em;
                 }
               }
             }
@@ -578,6 +610,10 @@ main {
               height: -webkit-fill-available;
               overflow-y: auto;
 
+              @media screen and (min-width: 800px) {
+                padding-inline: 130px;
+              }
+
               @media screen and (max-width: 799px) {
                 margin-top: 20px;
                 height: auto;
@@ -588,14 +624,18 @@ main {
 
               h3 {
                 margin-top: 1em;
-                font-size: 34px !important;
+                font-size: 32px !important;
 
-                @media screen and (max-width: 1370px) {
-                  font-size: 20px !important;
+                @media screen and (min-width: 800px) {
+                  text-align: center;
                 }
 
                 @media screen and (max-width: 799px) {
                   font-size: 24px !important;
+                }
+
+                @media screen and (max-width: 1370px) {
+                  font-size: 20px !important;
                 }
 
                 span {
@@ -611,8 +651,11 @@ main {
               p {
                 font-size: 18px;
                 color: #252523;
-                text-align: center;
                 margin-top: 1em;
+
+                @media screen and (max-width: 799px) {
+                  text-align: center;
+                }
 
                 @media screen and (max-width: 1370px) {
                   font-size: 16px !important;
