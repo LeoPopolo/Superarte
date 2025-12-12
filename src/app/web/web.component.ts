@@ -600,16 +600,14 @@ export class WebComponent {
 
         <h2>CUATRIMESTRE 1</h2>
           <span>.</span> <h3>Principios bíblicos de la adoración</h3>
-          </br>
-          <span>.</span> <h3>Principios de vida devocional</h3>
         <h2>CUATRIMESTRE 2</h2>
-          <span>.</span> <h3>Liderazgo</h3>
-          </br>
-          <span>.</span> <h3>Carácter cristiano</h3>
+          <span>.</span> <h3>Principios de vida devocional</h3>
         <h2>CUATRIMESTRE 3</h2>
-          <span>.</span> <h3>Materia IBE 1 (rotativa)</h3>
+          <span>.</span> <h3>Carácter cristiano</h3>
+          <br>
+          <span>.</span> <h3>Tabernáculo</h3>
         <h2>CUATRIMESTRE 4</h2>
-          <span>.</span> <h3>Materia IBE 2 (rotativa)</h3>
+          <span>.</span> <h3>Liderazgo</h3>
       </div>
     `;
   }
